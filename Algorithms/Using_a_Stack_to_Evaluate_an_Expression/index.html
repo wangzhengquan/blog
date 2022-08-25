@@ -1,0 +1,328 @@
+<!doctype html><html lang=en class=no-js> <head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><link href=https://example.com/Algorithms/Using_a_Stack_to_Evaluate_an_Expression/ rel=canonical><link rel=icon href=../../assets/images/favicon.png><meta name=generator content="mkdocs-1.3.1, mkdocs-material-8.3.9"><title>Using a Stack to Evaluate an Expression - My Blogs</title><link rel=stylesheet href=../../assets/stylesheets/main.1d29e8d0.min.css><link rel=stylesheet href=../../assets/stylesheets/palette.cbb835fc.min.css><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback"><style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style><script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script></head> <body dir=ltr data-md-color-scheme data-md-color-primary=none data-md-color-accent=none> <input class=md-toggle data-md-toggle=drawer type=checkbox id=__drawer autocomplete=off> <input class=md-toggle data-md-toggle=search type=checkbox id=__search autocomplete=off> <label class=md-overlay for=__drawer></label> <div data-md-component=skip> <a href=#using-a-stack-to-evaluate-an-expression class=md-skip> Skip to content </a> </div> <div data-md-component=announce> </div> <header class=md-header data-md-component=header> <nav class="md-header__inner md-grid" aria-label=Header> <a href=../.. title="My Blogs" class="md-header__button md-logo" aria-label="My Blogs" data-md-component=logo> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg> </a> <label class="md-header__button md-icon" for=__drawer> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg> </label> <div class=md-header__title data-md-component=header-title> <div class=md-header__ellipsis> <div class=md-header__topic> <span class=md-ellipsis> My Blogs </span> </div> <div class=md-header__topic data-md-component=header-topic> <span class=md-ellipsis> Using a Stack to Evaluate an Expression </span> </div> </div> </div> <label class="md-header__button md-icon" for=__search> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg> </label> <div class=md-search data-md-component=search role=dialog> <label class=md-search__overlay for=__search></label> <div class=md-search__inner role=search> <form class=md-search__form name=search> <input type=text class=md-search__input name=query aria-label=Search placeholder=Search autocapitalize=off autocorrect=off autocomplete=off spellcheck=false data-md-component=search-query required> <label class="md-search__icon md-icon" for=__search> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg> </label> <nav class=md-search__options aria-label=Search> <button type=reset class="md-search__icon md-icon" aria-label=Clear tabindex=-1> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg> </button> </nav> </form> <div class=md-search__output> <div class=md-search__scrollwrap data-md-scrollfix> <div class=md-search-result data-md-component=search-result> <div class=md-search-result__meta> Initializing search </div> <ol class=md-search-result__list></ol> </div> </div> </div> </div> </div> </nav> </header> <div class=md-container data-md-component=container> <main class=md-main data-md-component=main> <div class="md-main__inner md-grid"> <div class="md-sidebar md-sidebar--primary" data-md-component=sidebar data-md-type=navigation> <div class=md-sidebar__scrollwrap> <div class=md-sidebar__inner> <nav class="md-nav md-nav--primary" aria-label=Navigation data-md-level=0> <label class=md-nav__title for=__drawer> <a href=../.. title="My Blogs" class="md-nav__button md-logo" aria-label="My Blogs" data-md-component=logo> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg> </a> My Blogs </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../.. class=md-nav__link> 简介 </a> </li> <li class="md-nav__item md-nav__item--active md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=__nav_2 type=checkbox id=__nav_2 checked> <label class=md-nav__link for=__nav_2> Algorithms <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav aria-label=Algorithms data-md-level=1> <label class=md-nav__title for=__nav_2> <span class="md-nav__icon md-icon"></span> Algorithms </label> <ul class=md-nav__list data-md-scrollfix> <li class="md-nav__item md-nav__item--active"> <input class="md-nav__toggle md-toggle" data-md-toggle=toc type=checkbox id=__toc> <label class="md-nav__link md-nav__link--active" for=__toc> Using a Stack to Evaluate an Expression <span class="md-nav__icon md-icon"></span> </label> <a href=./ class="md-nav__link md-nav__link--active"> Using a Stack to Evaluate an Expression </a> <nav class="md-nav md-nav--secondary" aria-label="Table of contents"> <label class=md-nav__title for=__toc> <span class="md-nav__icon md-icon"></span> Table of contents </label> <ul class=md-nav__list data-md-component=toc data-md-scrollfix> <li class=md-nav__item> <a href=#transform-an-infix-expression-to-postfix-notation class=md-nav__link> Transform an infix expression to postfix notation </a> </li> <li class=md-nav__item> <a href=#evaluate-a-postfix-expression class=md-nav__link> Evaluate a postfix expression </a> </li> <li class=md-nav__item> <a href=#how-can-this-be-implemented class=md-nav__link> How can this be implemented? </a> </li> <li class=md-nav__item> <a href=#a-java-implementation class=md-nav__link> A java implementation </a> </li> </ul> </nav> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=__nav_3 type=checkbox id=__nav_3> <label class=md-nav__link for=__nav_3> Linux <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav aria-label=Linux data-md-level=1> <label class=md-nav__title for=__nav_3> <span class="md-nav__icon md-icon"></span> Linux </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../Linux/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/ class=md-nav__link> Linux常用命令 </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=__nav_4 type=checkbox id=__nav_4> <label class=md-nav__link for=__nav_4> MacOS <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav aria-label=MacOS data-md-level=1> <label class=md-nav__title for=__nav_4> <span class="md-nav__icon md-icon"></span> MacOS </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../MacOS/Launching%20Custom%20Daemons%20Using%20launchd/ class=md-nav__link> Launching Custom Daemons Using launchd </a> </li> <li class=md-nav__item> <a href=../../MacOS/MacOS%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/ class=md-nav__link> MacOS常用命令 </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=__nav_5 type=checkbox id=__nav_5> <label class=md-nav__link for=__nav_5> Unbuntu <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav aria-label=Unbuntu data-md-level=1> <label class=md-nav__title for=__nav_5> <span class="md-nav__icon md-icon"></span> Unbuntu </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../Unbuntu/fix-the-no-wi-fi-adapter-found-error-on-ubuntu/ class=md-nav__link> Fix “No Wi-Fi Adapter Found” Error on Ubuntu </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=__nav_6 type=checkbox id=__nav_6> <label class=md-nav__link for=__nav_6> Vim <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav aria-label=Vim data-md-level=1> <label class=md-nav__title for=__nav_6> <span class="md-nav__icon md-icon"></span> Vim </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../Vim/vim%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/ class=md-nav__link> Vim常用命令 </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=__nav_7 type=checkbox id=__nav_7> <label class=md-nav__link for=__nav_7> 一级目录 <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav aria-label=一级目录 data-md-level=1> <label class=md-nav__title for=__nav_7> <span class="md-nav__icon md-icon"></span> 一级目录 </label> <ul class=md-nav__list data-md-scrollfix> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=__nav_7_1 type=checkbox id=__nav_7_1> <label class=md-nav__link for=__nav_7_1> 二级目录1 <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav aria-label=二级目录1 data-md-level=2> <label class=md-nav__title for=__nav_7_1> <span class="md-nav__icon md-icon"></span> 二级目录1 </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../node1 class=md-nav__link> 节点 </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=__nav_7_2 type=checkbox id=__nav_7_2> <label class=md-nav__link for=__nav_7_2> 二级目录2 <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav aria-label=二级目录2 data-md-level=2> <label class=md-nav__title for=__nav_7_2> <span class="md-nav__icon md-icon"></span> 二级目录2 </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../node2 class=md-nav__link> 节点 </a> </li> </ul> </nav> </li> </ul> </nav> </li> </ul> </nav> </div> </div> </div> <div class="md-sidebar md-sidebar--secondary" data-md-component=sidebar data-md-type=toc> <div class=md-sidebar__scrollwrap> <div class=md-sidebar__inner> <nav class="md-nav md-nav--secondary" aria-label="Table of contents"> <label class=md-nav__title for=__toc> <span class="md-nav__icon md-icon"></span> Table of contents </label> <ul class=md-nav__list data-md-component=toc data-md-scrollfix> <li class=md-nav__item> <a href=#transform-an-infix-expression-to-postfix-notation class=md-nav__link> Transform an infix expression to postfix notation </a> </li> <li class=md-nav__item> <a href=#evaluate-a-postfix-expression class=md-nav__link> Evaluate a postfix expression </a> </li> <li class=md-nav__item> <a href=#how-can-this-be-implemented class=md-nav__link> How can this be implemented? </a> </li> <li class=md-nav__item> <a href=#a-java-implementation class=md-nav__link> A java implementation </a> </li> </ul> </nav> </div> </div> </div> <div class=md-content data-md-component=content> <article class="md-content__inner md-typeset"> <h1 id=using-a-stack-to-evaluate-an-expression>Using a Stack to Evaluate an Expression</h1> <p>We often deal with arithmetic expressions written in what is called infix notation:</p> <pre><code>         Operand1 op Operand2
+</code></pre> <p>We have rules to indicate which operations take precedence over others, and we often use parentheses to override those rules.</p> <p>It is also quite possible to write arithmetic expressions using postfix notation:</p> <pre><code>     Operand1 Operand2 op
+</code></pre> <p>With postfix notation, it is possible to use a stack to find the overall value of an infix expression by first converting it to postfix notation.</p> <p>Example: Suppose we have this infix expression Q:</p> <pre><code>     5 * ( 6 + 2 ) - 12 / 4
+</code></pre> <p>The equivalent postfix expression P is:</p> <pre><code>     5 6 2 + * 12 4 / -
+</code></pre> <p>This discussion assumes all our operations are binary operations (2 arguments each). Notice that we also sometimes use unary operations such as ++ or -- or the unary + and -.</p> <p>We are not including the possibility of array elements in this discussion. (The subscript can be an expression which would have to be evaluated.)</p> <p>One way to think of an expression is as a list or sequence of items, each of which is a left parenthesis, right parenthesis, argument, or operator. An argument can be a constant or the name of a variable. Presumably it would be necessary at some point to replace each variable with its value.</p> <p>There are two algorithms involved. One converts an infix expression to postfix form, and the other evaluates a postfix expression. Each uses a stack.</p> <h2 id=transform-an-infix-expression-to-postfix-notation>Transform an infix expression to postfix notation</h2> <p>Suppose Q is an arithmetic expression in infix notation. We will create an equivalent postfix expression P by adding items to on the right of P. The new expression P will not contain any parentheses.</p> <p>We will use a stack in which each item may be a left parenthesis or the symbol for an operation.</p> <pre><code> Start with an empty stack.  We scan Q from left to right.
+
+ While (we have not reached the end of Q)
+    If (an operand is found)
+       Add it to P
+    End-If
+    If (a left parenthesis is found) 
+       Push it onto the stack
+    End-If
+    If (a right parenthesis is found) 
+       While (the stack is not empty AND the top item is
+              not a left parenthesis)
+          Pop the stack and add the popped value to P
+       End-While
+       Pop the left parenthesis from the stack and discard it 
+    End-If
+    If (an operator is found)
+       If (the stack is empty or if the top element is a left
+           parenthesis)
+          Push the operator onto the stack
+       Else  
+          While (the stack is not empty AND the top of the stack 
+                 is not a left parenthesis AND precedence of the                  
+                 operator &lt;= precedence of the top of the stack)
+             Pop the stack and add the top value to P
+          End-While
+          Push the latest operator onto the stack     
+       End-If  
+    End-If
+ End-While
+ While (the stack is not empty)
+    Pop the stack and add the popped value to P
+ End-While
+</code></pre> <p>Notes: * At the end, if there is still a left parenthesis at the top of the stack, or if we find a right parenthesis when the stack is empty, then Q contained unbalanced parentheses and is in error.</p> <h2 id=evaluate-a-postfix-expression>Evaluate a postfix expression</h2> <p>Suppose P is an arithmetic expression in postfix notation. We will evaluate it using a stack to hold the operands.</p> <pre><code> Start with an empty stack.  We scan P from left to right.
+
+ While (we have not reached the end of P)
+    If an operand is found
+       push it onto the stack
+    End-If
+    If an operator is found
+       Pop the stack and call the value A
+       Pop the stack and call the value B
+       Evaluate B op A using the operator just found.
+       Push the resulting value onto the stack
+    End-If
+End-While
+Pop the stack (this is the final value)
+</code></pre> <p>Notes:</p> <ul> <li>At the end, there should be only one element left on the stack.</li> <li>This assumes the postfix expression is valid.</li> </ul> <h2 id=how-can-this-be-implemented>How can this be implemented?</h2> <p>Work like this is usually done by an assembler, compiler or interpreter. A programmer uses an expression in her or her code, and evaluating it is someone else's problem.</p> <p>Suppose it is our problem (maybe we are writing an interpreter). The interpreter is reading a line at a time from a file as a string, such as</p> <pre><code>     A = ((B + C) / 3 - 47 % E) * (F + 8)
+</code></pre> <p>The string needs to be parsed--that is, we need to break it up into substrings, each of which is one meaningful part. These substrings are often called tokens. The tokens are separated by spaces, in many cases, but also a token ends if we find a left or right parenthesis or the symbol for an operator. Thus for instance, in the above example, we have "E)", and this consists of two tokens "E" and ")". Bear in mind that the symbol for an operator can be more than one character.</p> <p>We then have a list of tokens, perhaps in an array or a linked list. Somewhere we will have an Evaluate function which takes such a list as an argument and returns a numeric value.</p> <h2 id=a-java-implementation>A java implementation</h2> <pre><code class=language-java>/**
+ * A perfect calculator
+ * &lt;p&gt;
+ * Dijkstra’s Two-Stack Algorithm for Expression Evaluation
+ * Reference:
+ * http://faculty.cs.niu.edu/~hutchins/csci241/eval.htm
+ * Discrete mathmatics and its application 7th --&gt; 11.3 Tree Travesal
+ *
+ * &lt;p&gt;
+ * % java Calculator
+ * 2 +  ( 3 + 4 ) * ( 5 * 6 )
+ * 212.0
+ * &lt;p&gt;
+ * 1 +  ( 2 + 3 ) * ( 4 * 5 )
+ * 101.0
+ * &lt;p&gt;
+ * ( 1 + sqrt( 5.0+4*3+sqrt(30*2+3) ) ) / 2.0
+ * 2.996860725651001
+ * &lt;p&gt;
+ * ( 1 + sqrt ( 5.0 ) ) / 2.0
+ * 1.618033988749895
+ */
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.Scanner;
+import java.util.Stack;
+import java.util.TreeMap;
+
+public class Calculator {
+  // key is operator, value is precedence
+  private final Map&lt;String, Integer&gt; OPERATOR_MAP = new TreeMap&lt;&gt;();
+
+  public Calculator() {
+    // &lt;symbol, precedence&gt;
+    OPERATOR_MAP.put(&quot;+&quot;, 1);
+    OPERATOR_MAP.put(&quot;-&quot;, 1);
+    OPERATOR_MAP.put(&quot;*&quot;, 2);
+    OPERATOR_MAP.put(&quot;/&quot;, 2);
+    OPERATOR_MAP.put(&quot;^&quot;, 3); // power
+    OPERATOR_MAP.put(&quot;sqrt&quot;, 4);
+    OPERATOR_MAP.put(&quot;sin&quot;, 4);
+    OPERATOR_MAP.put(&quot;cos&quot;, 4);
+    OPERATOR_MAP.put(&quot;log&quot;, 4); //natural logarithm
+
+  }
+
+  public double evaluate(String expression) {
+    if (expression == null || expression.length() == 0) {
+      throw new IllegalArgumentException(&quot;empty expression&quot;);
+    }
+    return evaluatePostfix(infixToPostfix(tokenlizedExpression(expression)));
+  }
+
+  private List&lt;String&gt; tokenlizedExpression(String expression) {
+    List&lt;String&gt; infixQ = new ArrayList&lt;&gt;();
+    StringBuilder buf = new StringBuilder();
+    int len = expression.length();
+    for (int i = 0; i &lt; len; i++) {
+      char c = expression.charAt(i);
+      if (c == ' ')
+        continue;
+      if (OPERATOR_MAP.containsKey(String.valueOf(c)) || c == '(' || c == ')') {
+        if (buf.length() &gt; 0) {
+          infixQ.add(buf.toString());
+          buf = new StringBuilder();
+        }
+
+        infixQ.add(String.valueOf(c));
+      } else
+        buf.append(c);
+    }
+
+    if (buf.length() &gt; 0)
+      infixQ.add(buf.toString());
+    return infixQ;
+
+  }
+
+  /**
+   * Transform an infix queue to postfix queue
+   *
+   * @param infixQ
+   * @return
+   */
+  private List&lt;String&gt; infixToPostfix(List&lt;String&gt; infixQ) {
+    if (infixQ == null || infixQ.isEmpty()) {
+      throw new IllegalArgumentException(&quot;empty infixQ&quot;);
+    }
+    List&lt;String&gt; postfixQ = new ArrayList&lt;&gt;();
+    //operator stack , a stack in which each item may be a left parenthesis or the symbol for an operation.
+    Stack&lt;String&gt; stack = new Stack&lt;String&gt;();
+    for (String token : infixQ) {
+      //If (an operand is found) Add it to P
+      if (isNumeric(token)) {
+        postfixQ.add(token);
+      } else if (token.equals(&quot;(&quot;)) {
+        stack.push(token);
+      } else if (token.equals(&quot;)&quot;)) {
+        while (!stack.isEmpty() &amp;&amp; !stack.peek().equals(&quot;(&quot;)) {
+          postfixQ.add(stack.pop());
+        }
+
+        //Pop the left parenthesis from the stack and discard it
+        if (stack.isEmpty() || !stack.pop().equals(&quot;(&quot;)) {
+          throw new IllegalArgumentException(&quot; then infixQ contained unbalanced parentheses &quot;);
+        }
+      } else if (OPERATOR_MAP.containsKey(token)) {
+        if (stack.isEmpty() || stack.peek().equals(&quot;(&quot;)) {
+          stack.push(token);
+        } else {
+          while (!stack.isEmpty() &amp;&amp; !stack.peek().equals(&quot;(&quot;) &amp;&amp; precedence(token) &lt;= precedence(stack.peek())) {
+            postfixQ.add(stack.pop());
+          }
+          stack.push(token);
+        }
+      } else {
+        throw new IllegalArgumentException(&quot; invalid token found:&quot; + token);
+      }
+    }
+    while (!stack.isEmpty()) {
+      String opt = stack.pop();
+      if (!opt.equals(&quot;(&quot;))
+        postfixQ.add(opt);
+      else
+        throw new IllegalArgumentException(&quot; then infixQ contained unbalanced parentheses &quot;);
+
+    }
+    return postfixQ;
+  }
+
+  /**
+   * Evaluate a postfix queue
+   *
+   * @param postfixQ
+   * @return
+   */
+  private Double evaluatePostfix(List&lt;String&gt; postfixQ) {
+    if (postfixQ == null || postfixQ.isEmpty()) {
+      throw new IllegalArgumentException(&quot;empty postfixQ&quot;);
+    }
+    //operand stack, a stack to hold the operands.
+    Stack&lt;Double&gt; stack = new Stack&lt;&gt;();
+    for (String token : postfixQ) {
+      //If an operand is found push it onto the stack
+      if (isNumeric(token)) {
+        stack.push(Double.parseDouble(token));
+      } else if (OPERATOR_MAP.containsKey(token)) {
+        //If an operator is found
+
+        double v = stack.pop();
+        if (token.equals(&quot;+&quot;)) v = stack.pop() + v;
+        else if (token.equals(&quot;-&quot;)) v = stack.pop() - v;
+        else if (token.equals(&quot;*&quot;)) v = stack.pop() * v;
+        else if (token.equals(&quot;/&quot;)) v = stack.pop() / v;
+        else if (token.equals(&quot;^&quot;)) v = Math.pow(stack.pop(), v);
+        else if (token.equals(&quot;sqrt&quot;)) v = Math.sqrt(v);
+        else if (token.equals(&quot;sin&quot;)) v = Math.sin(degreeToRadian(v));
+        else if (token.equals(&quot;cos&quot;)) v = Math.cos(degreeToRadian(v));
+        else if (token.equals(&quot;log&quot;)) v = Math.log(v);
+        stack.push(v);
+      } else {
+        throw new IllegalArgumentException(&quot; invalid token found:&quot; + token);
+      }
+    }
+    //At the end, there should be only one element left on the stack.
+    if (stack.size() != 1) {
+      throw new IllegalArgumentException(&quot;Invalid postfix&quot;);
+    }
+    return stack.pop();
+  }
+
+  private int precedence(String token) {
+    return OPERATOR_MAP.get(token);
+  }
+
+  private static double degreeToRadian(double degree) {
+    return degree / 180 * Math.PI;
+  }
+
+  private static boolean isNumeric(String token) {
+    if (token == null) {
+      return false;
+    }
+    try {
+      Double.parseDouble(token);
+    } catch (NumberFormatException nfe) {
+      return false;
+    }
+    return true;
+  }
+
+  /**
+   * match a number with optional '-' and decimal.
+   */
+  private static boolean isNumeric2(String str) {
+    return str.matches(&quot;-?\\d+(\\.\\d+)?&quot;);
+  }
+
+  private double debug(String expression) {
+    System.out.println(&quot;---expression---&quot;);
+    System.out.println(expression);
+    List&lt;String&gt; infixQ = tokenlizedExpression(expression);
+    System.out.println(&quot;---infix---&quot;);
+    for (String token : infixQ) {
+      System.out.print(token + &quot; &quot;);
+    }
+    System.out.println(&quot;\n---postfix---&quot;);
+    List&lt;String&gt; postfixQ = infixToPostfix(infixQ);
+    for (String token : postfixQ) {
+      System.out.print(token + &quot; &quot;);
+    }
+    System.out.println();
+    return evaluatePostfix(postfixQ);
+  }
+
+  private static void simulate() {
+    //    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    //    String line = br.readLine();
+    Calculator cal = new Calculator();
+    Scanner scanner = new Scanner(System.in, &quot;UTF-8&quot;);
+    while (scanner.hasNextLine()) {
+      String expression = scanner.nextLine().trim();
+      if (expression.length() == 0)
+        continue;
+      if (expression.equals(&quot;quit&quot;))
+        break;
+      System.out.println(cal.evaluate(expression));
+    }
+  }
+
+  public static void main(String[] args) {
+
+   simulate();
+//    test2();
+    // testCorrect();
+  }
+
+  private static void test1() {
+
+    String expression = &quot;2*(5+4+3+2*2*2+1)&quot;;
+    Calculator cal = new Calculator();
+
+    System.out.println(&quot;value:&quot; + cal.debug(expression));
+  }
+
+  private static void test2() {
+    List&lt;String&gt; expressions = new ArrayList&lt;&gt;();
+    expressions.add(&quot;(8+9)^2+(8-4)/3&quot;);
+    expressions.add(&quot;(2+sqrt(5+4))&quot;);
+    expressions.add(&quot;2 + ( 3 + 4 ) * ( 5 * 6 )&quot;);
+    expressions.add(&quot;1 + ( 2 + 3 ) * ( 4 * 5 )&quot;);
+    expressions.add(&quot;(1 + sqrt(5.0+4*3+sqrt(30*2+3)) ) / 2.0&quot;);
+    expressions.add(&quot;(1 + log( 5.0+4*3+sqrt(30*2+3) ) ) / 2.0&quot;);
+    expressions.add(&quot;(1 + sqrt ( 5.0 ) ) / 2.0&quot;);
+    expressions.add(&quot;6*sin(30)&quot;);
+    expressions.add(&quot;6*(5+4+3)&quot;);
+    expressions.add(&quot;2*(5+4+3+2*2*2+1)&quot;);
+    Calculator cal = new Calculator();
+    for (String expression : expressions) {
+      System.out.println(expression + &quot; = &quot; + cal.evaluate(expression));
+    }
+  }
+
+  private static void testCorrect() {
+    Calculator cal = new Calculator();
+    if (cal.evaluate(&quot;(1 + sqrt(5.0+4*3+sqrt(30*2+3)) ) / 2.0&quot;) == (1 + Math.sqrt(5.0 + 4 * 3 + Math.sqrt(30 * 2 + 3))) / 2.0) {
+      System.out.println(&quot;passed&quot;);
+    } else {
+      throw new Error(&quot;Not a correct value&quot;);
+    }
+  }
+}
+
+</code></pre> <blockquote> <p>http://faculty.cs.niu.edu/~hutchins/csci241/eval.htm</p> </blockquote> </article> </div> </div> </main> <footer class=md-footer> <nav class="md-footer__inner md-grid" aria-label=Footer> <a href=../.. class="md-footer__link md-footer__link--prev" aria-label="Previous: 简介" rel=prev> <div class="md-footer__button md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg> </div> <div class=md-footer__title> <div class=md-ellipsis> <span class=md-footer__direction> Previous </span> 简介 </div> </div> </a> <a href=../../Linux/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/ class="md-footer__link md-footer__link--next" aria-label="Next: Linux常用命令" rel=next> <div class=md-footer__title> <div class=md-ellipsis> <span class=md-footer__direction> Next </span> Linux常用命令 </div> </div> <div class="md-footer__button md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg> </div> </a> </nav> <div class="md-footer-meta md-typeset"> <div class="md-footer-meta__inner md-grid"> <div class=md-copyright> Made with <a href=https://squidfunk.github.io/mkdocs-material/ target=_blank rel=noopener> Material for MkDocs </a> </div> </div> </div> </footer> </div> <div class=md-dialog data-md-component=dialog> <div class="md-dialog__inner md-typeset"></div> </div> <script id=__config type=application/json>{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script> <script src=../../assets/javascripts/bundle.6c7ad80a.min.js></script> </body> </html>
