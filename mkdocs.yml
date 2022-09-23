@@ -1,5 +1,5 @@
 site_name: My Blogs
-site_url: https://example.com/
+site_url: https://wangzhengquan.github.io/blog
 theme: material
 plugins:
   - search
@@ -11,8 +11,10 @@ nav:
   - 简介: 'index.md'
   - Algorithms:
     - Using a Stack to Evaluate an Expression: 'Algorithms/Using_a_Stack_to_Evaluate_an_Expression.md'
+    - Using two stacks to Evaluate an Expression: 'Algorithms/Using two stacks to Evaluate an Expression.md'
   - Linux:
     - Linux常用命令: 'Linux/Linux常用命令.md'
+    - Shell Script: 'Linux/Shell Script.md'
   - MacOS:
     - Launching Custom Daemons Using launchd: 'MacOS/Launching Custom Daemons Using launchd.md'
     - MacOS常用命令: 'MacOS/MacOS常用命令.md'
@@ -20,6 +22,8 @@ nav:
     - Fix “No Wi-Fi Adapter Found” Error on Ubuntu: 'Unbuntu/fix-the-no-wi-fi-adapter-found-error-on-ubuntu.md'
   - Vim:
     - Vim常用命令: 'Vim/vim常用命令.md'
+  - 编辑器:
+    - Sublime: '编辑器/Sublime.md'
   - 一级目录:
     - 二级目录1:
       - 节点: 'node1'

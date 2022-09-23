@@ -220,8 +220,8 @@ cd wzq~
 ```
 
 
-### 文本文件工具
-** grep **
+## grep
+
 替换或删除跨越多个目录的多个文件里的指定文本
 ```bash
 # 替换当前目录下所有文件里的‘window’为‘linux’
@@ -238,7 +238,9 @@ grep -rl 'windows' ./ | xargs sed -i ''   '/windows/d'
 # count the number of occurrence of a word in a text file
 grep -o -i 'word' test.txt | wc -l
 ```
-** find **
+
+## find
+
 ```bash
 find . -name "*nng*" -exec rm -rf {} \;
 
@@ -249,7 +251,7 @@ find /usr -depth -name $(uname -m)-lfs-linux-gnu\* | xargs rm -rf
 find $(1) -not -type d -and -not -type l -print0 | xargs -0r chmod $(FILE_MODE)
 ```
 
-**比较两个目录内文件的差异**
+## diff
 ```bash
 方法一：
 diff -bur [oldDir] [newDir]
@@ -257,7 +259,10 @@ diff -bur [oldDir] [newDir]
 rsync -rcnv [oldDir] [newDir]
 ```
 
-### 压缩与打包
+## sed
+ [https://www.grymoire.com/Unix/Sed.html](https://www.grymoire.com/Unix/Sed.html)
+
+## 压缩与打包
 ```bash
 [dmtsai@study ~]$ tar [-z|-j|-J] [cv] [-f 待建立的新檔名] filename... <==打包與壓縮
 [dmtsai@study ~]$ tar [-z|-j|-J] [tv] [-f 既有的 tar檔名]             <==察看檔名
@@ -368,13 +373,11 @@ find /home -name .bashrc > list 2>&1
 ```
 
 
-
-## 下载
-### wget
+## wget
 ```bash
 wget --input-file=wget-list --continue --directory-prefix=target-directory
 ```
-### curl
+## curl
 ```bash
  
 #-o, --output <file>: Write  output  to <file> instead of stdout.

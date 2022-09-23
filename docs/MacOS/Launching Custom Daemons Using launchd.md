@@ -39,9 +39,9 @@ case ${1} in
 esac
 
 ```
-This script  was named "blogserver.sh" locating in my blog diractory "/Users/wzq/wk/blog/". It start my blogserver, so that I can browse my blogs located in my own cumputer in the browser. It should be noted that the services programe you want to excute should not append a & symbol to the end as urual to daemonize on their own, cause we will let launchd to take over the task. If you do this way, launchd will lose track of it and attempt to relaunch it.
+This script  was named "blogserver.sh" locating in my blog diractory "~/wk/blog/". It start my blogserver, so that I can browse my blogs located in my own cumputer in the browser. It should be noted that the services programe you are going to excute should not append a & symbol to the end as urual to daemonize , cause we will let launchd to take over the task. If you do this way, launchd will lose track of it and attempt to relaunch it.
 
-OSX offers a few different startup options for us. First, we have Login Items available within Account Settings of the System Preference pane. We need to rename the shell script above to end in a .command file extension to allow the Login Items to execute it. This will run at login, however we will be left with a Terminal prompt visible when the script has completed. Preferably we would execute this in the background at user login. OSX manages system and user daemons via a tool called launchd. The interface to launchd is a tool called launchctl which allows for loading and unloading daemons into launchd. XML formatted plist files are used to describe operations loaded into launchctl.
+ The interface to launchd is a tool called launchctl which allows for loading and unloading daemons into launchd. XML formatted plist files are used to describe operations loaded into launchctl.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -58,8 +58,6 @@ OSX offers a few different startup options for us. First, we have Login Items av
     </array>
     <key>WorkingDirectory</key>
     <string>/Users/wzq/wk/blog</string>
-    <key>KeepAlive</key>
-    <true />
     <key>RunAtLoad</key>
     <true />
     <key>StandardErrorPath</key>
@@ -76,7 +74,8 @@ The above file, "mkdocs.blogs.plist" needs to be saved in the "~/Library/LaunchA
  launchctl load ~/Library/LaunchAgents/mkdocs.blogs.plist
 ```
 To verify that your script executed correctly lets ask launchctl to show us what is running.
-```
+
+```bash
 launchctl list | grep "mkdocs.blogs"
 ```
 You will likely see an entries with three columns. Mine looks like this:
