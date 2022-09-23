@@ -24,8 +24,4 @@ nav:
     - Vim常用命令: 'Vim/vim常用命令.md'
   - 编辑器:
     - Sublime: '编辑器/Sublime.md'
-  - 一级目录:
-    - 二级目录1:
-      - 节点: 'node1'
-    - 二级目录2:
-      - 节点: 'node2'
+   
