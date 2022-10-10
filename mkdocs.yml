@@ -24,4 +24,17 @@ nav:
     - Vim常用命令: 'Vim/vim常用命令.md'
   - 编辑器:
     - Sublime: '编辑器/Sublime.md'
+  - GCC:
+    - GCC compiling processes: 'GCC/GCC compiling processes.md'
+    - GCC Linking: 'GCC/GCC Linking.md'
+  - GDB:
+    - gdb demo: 'GDB/gdb demo/gdb demo.md'
+    - Summary of GDB commands: 'GDB/gdbnotes-x86-64.pdf'
+    - GDB Cheat Sheet: 'GDB/GDB Cheat Sheet.pdf'
+  - Markdown:
+    - Markdown Syntax: "Markdown/Markdown Syntax.md"
+    - Markdown模版: "Markdown/Markdown模版.md"
+
+  - SSH:
+    - SSH login without password: 'SSH/SSH login without password.md'
    
