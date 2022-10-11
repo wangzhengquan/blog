@@ -1,6 +1,6 @@
 ## The 4 processes of GCC compiling 
 
-The 4 processes of GCC compiling were preprocessor -> compiler -> assembler -> linker.
+The 4 processes of GCC compiling were **preprocess -> compile -> assemble -> link**.
 
 Consider the C program in the following. It will serve as a simple running example throughout this chapter that will allow us to make some important points about how linkers work.
 
@@ -35,7 +35,7 @@ The following figure summarizes the activities of the driver as it translates th
 
 ![](./img/Compile Process.png)
 
-** 1) preprocessor **  
+** 1) preprocess **  
 The driver first runs the C preprocessor (cpp), which translates the C source file main.c into an ASCII intermediate file main.i:
 ```
 cpp [other arguments] main.c main.i
@@ -46,7 +46,7 @@ gcc -E main.c -o main.i
 ```
 In this stage, the compiler will combin the header files link stdio.h into the targe file.
 
-** 2) compiler **  
+** 2) compile **  
 Next, the driver runs the C compiler (cc1), which translates main.i into an ASCII assembly-language file main.s:
 ```
 cc1 /tmp/main.i -Og [other arguments] -o main.s
@@ -60,7 +60,7 @@ You can also generate assmbly-languange from C file directly
 ```
 gcc -Og -S main.c -o main.s  
 ```
-** 3) assembler **  
+** 3) assemble **  
 Then, the driver runs the assembler (as), which translates main.s into a binary relocatable object file main.o:
 ```
 as [other arguments] -o main.o main.s
@@ -71,7 +71,7 @@ gcc -c main.s -o main.o
 ```
 The driver goes through the same process to generate sum.o. 
 
-** 4) linker **  
+** 4) link **  
 Finally, it runs the linker program ld, which combines main.o and sum.o, along with the necessary system object files, to create the binary executable object file prog:
 ```
 ld -o prog [system object files and args] main.o sum.o
