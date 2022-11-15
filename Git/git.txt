@@ -1,0 +1,9 @@
+https://git-scm.com/book/en/v2
+https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet
+
+http://goo.gl/cLBs3D
+http://think-like-a-git.net/
+
+
+https://eagain.net/articles/git-for-computer-scientists/
+https://mirrors.edge.kernel.org/pub/software/scm/git/docs/user-manual.html
