@@ -1,3 +1,6 @@
+## Linux 安装包查找
+[https://pkgs.org](https://pkgs.org)
+
 ## 系统硬件工具
 ### 查看各硬件的型号
 ```bash
@@ -19,33 +22,36 @@ nproc
 ```
 
 ### 磁盘
+
 参考：[鸟哥的Linux私房菜-第七章](http://linux.vbird.org/linux_basic/0230filesystem.php#lsblk) 
 
-磁盘使用占比
-列出系统所有的磁盘分区
+列出系统所有的装置，包括未挂载的
 ```bash
 lsblk -p
 
 lsblk -o NAME,PARTTYPE,MOUNTPOINT
 ```
-查看磁盘分区文件系统类型
-```bash
-sudo parted /dev/sda print
-```
 
+查看目前已挂载的装置/磁盘的剩余空间
 ```bash
 # 查看目前挂载的装置/磁盘剩余空间
 df -Th 
-# 将 /etc 底下的可用磁盘容量以易读的容量格式显示
+# 查看 /etc 所在磁盘的剩余空间
 df -h /etc
+```
 
+查看文件占用大小
+```bash
 # 查看/home目录下各文件占用大小
 du -sh /home/*
 # 查看 /home目录占用大小
 du -sh /home
 ```
 
-
+查看磁盘分区文件系统类型
+```bash
+sudo parted /dev/sda print
+```
 
 旧有的MBR分区使用的“磁盘分区”命令
 ```bash
@@ -72,29 +78,42 @@ mkswap /dev/<yyy>
 fsck -C -f -t ext3 /dev/sda1
 ```
 
-检查硬盘戒软盘扂区有没有坏轨
+检查硬盘扇区有没有坏轨
 
 ```bash
 badblocks -sv /dev/sda
 ```
 
 观察文件系统
+
 ```bash
 dumpe2fs 
 ```
+
 查看硬盘信息 制造商序列号等
+
 ```bash
 sudo hdparm -i /dev/sda
- # or
+# or
 sudo smartctl -a /dev/sda
- ```
+```
 
+
+### 制作启动硬盘
+
+如果在linux上用 `lsblk -p` 查看USB设备，如果是macos要用`diskutil list`查看, 查找到我的USB设备是/dev/disk3， 然后用dd命令把系统安装镜像烧录到USB上
+
+```bash
+dd if=ubuntu-16.04.5-desktop-amd64.iso of=/dev/disk3
+```
+
+如果提示 “ Resource busy”, 在linux上用 `umount /dev/disk3`, 在macos上用`diskutil umount /dev/disk3` 取消挂载。
 
 ###  loop dev
 ```bash
 dd if=/dev/zero of=./rootfs.ext3 bs=1M count=32
 mkfs.ext3 rootfs.ext3
-sudo mount -o loop xxx.iso  /test/
+sudo mount -o loop rootfs.ext3  /test/
 ```
 
 ### 查看initramfs
@@ -126,17 +145,24 @@ $ cpio -i -d -H newc --no-absolute-filenames < initramfs
 ```
 
 ## 系统信息
+
 ### 查看系统信息
+
+Type any one of the following command to find os name and version in Linux:
+```bash
+cat /etc/os-release
+lsb_release -a
+hostnamectl
+```
+
+Type the following command to find Linux kernel version
+```
+uname -r
+```
+
 ```bash
 # 查看系统信息
-uname -a
 cat /proc/version 
-
-# 内核版本
-uname -r
-# distribution的版本信息
-lsb_release -a 
-
 # 系统架构
 arch
 file /bin/ls 
@@ -144,13 +170,23 @@ file /bin/ls
 get_conf LONG_BIT
 ```
 
-### 使用手册查看说明
+## man -  Manual Pages
+If you want the man page for a single program/command, you can run:
 ```bash
-# 查找系统内跟passwd有关的说明
-man -f passwd
-# 按关键词查找跟passwd有关的说明
-man -k 关键词
+man command_name | less
 ```
+Hit q to exit the man page and get back to your terminal prompt.
+
+查找系统内跟passwd有关的说明
+```bash
+man -f passwd
+```
+
+If you want to search the man pages for a command that pertains to a keyword:
+```bash
+man -k single_keyword | less
+```
+This command will search the manual pages for a command with the keyword 'single_keyword'. Forget how to open files in Vim? You can search for 'editor' and get a list of all editor-related commands on your system.
 
 ### 系统进程
 ```bash
@@ -252,11 +288,18 @@ find $(1) -not -type d -and -not -type l -print0 | xargs -0r chmod $(FILE_MODE)
 ```
 
 ## diff
+
+
 ```bash
 方法一：
 diff -bur [oldDir] [newDir]
 方法二：
 rsync -rcnv [oldDir] [newDir]
+```
+
+Split the screen to two columns for comparing convenience
+```bash
+diff -y [oldDir] [newDir]
 ```
 
 ## sed
@@ -318,42 +361,87 @@ tar -xpf $HOME/lfs-temp-tools-10.0-systemd.tar.xz
 ```
 
 
-## 关机/重启
+## User
 
+### add user 
+
+add the new user vivi
 ```bash
-# 未保存的内存数据写入硬盘
-sync
-# 立刻关机，其中 now 相当亍时间为 0 的状态
-shutdown -h now
-# 系统在今天的 20:25 分会关机，若在 21:25 才下达此挃令，则隑天才关机
-shutdown -h 20:25
-# 系统再过十分钟后自劢关机
-shutdown -h +10
-# 系统立刻重新启劢
-shutdown -r now
-# 再过三十分钟系统会重新启劢，幵显示后面的讯息给所有在在线的使用者
-shutdown -r +30 'The system will reboot'
-# 仅发出警告，系统并不会关机啦!吓唬人!
-shutdown -k now 'This system will reboot'
-# 重新启劢，关机，断电
-reboot, halt, poweroff
+groupadd vivi
+useradd -s /bin/bash -g vivi -m -d /home/vivi vivi
+# useradd -s /bin/bash -g vivi -m -k /dev/null vivi
+passwd vivi
+```
+The command adds an entry to the /etc/passwd, /etc/shadow, /etc/group and /etc/gshadow files.
+
+Or, Simply by
+```bash
+useradd -s /bin/bash -m vivi
+passwd vivi
 ```
 
-## 用户
-add the new user lfs
+Or, adduser is an interactive command-line tool available by default in most Linux distributions.
 ```bash
-groupadd lfs
-useradd -s /bin/bash -g lfs -m -k /dev/null lfs
-passwd lfs
-
-# add user lfs to group wheel
-usermod -a -G wheel lfs
+adduser vivi
 ```
+
+[More about create user](https://linuxize.com/post/how-to-create-users-in-linux-using-the-useradd-command/)
+
+### add user to sudoers 
+Most Linux systems, including Ubuntu, have a user group for sudo users. To grant the new user elevated privileges, add them to the sudo group.
+```bash
+usermod -aG sudo vivi
+```
+The -aG option tells the system to append the user to the specified group. (The -a option is only used with G.)
+
+Or
+```bash
+sudo adduser vivi sudo
+```
+[More about sudo](https://jumpcloud.com/blog/how-to-create-a-new-sudo-user-manage-sudo-access-on-ubuntu-20-04)
+
+### delete user
+
+```bash
+userdel -r vivi
+
+```
+
+`-r` Remove Linux user account including home directory and mail spool
+
+### Verify user information
+```bash
+lslogins vivi
+
+id vivi
+```
+
+### View the groups a user belongs to
+```bash
+groups vivi
+```
+
+### Gain root shell
+```bash
+sudo -s
+```
+or
+```bash
+sudo -i
+```
+
+
 
 ## Terminal
-### 移动游标
-* 從游標處向前刪除指令串 ([ctrl]+u); 向後刪除指令串 ([ctrl]+k)。
-* 讓游標移動到整個指令串的最前面 ([ctrl]+a) 或最後面 ([ctrl]+e)。
+### CLI Shortcuts
+* `[ctrl]+u` / `[ctrl]+k` 删除行内光标所在位置之前/后的内容
+* `<ctrl> + a` `<ctrl> + e` will move the cursor to the beginning / end of the current line
+* `alt-f` / `alt-b`  可以以单词为单位向前/后移动光标
+* `ctrl-w` 删除你键入的最后一个单词
+* `ctrl-l` 清屏
+* `<ctrl> + r` will let you search through your recently used commands
+
+你喜欢的话，可以执行 `set -o vi` 来使用 vi 风格的快捷键，而执行 `set -o emacs` 可以把它改回来。
 
 ### history
 ```bash
@@ -375,7 +463,7 @@ find /home -name .bashrc > list 2>&1
 
 ## wget
 ```bash
-wget --input-file=wget-list --continue --directory-prefix=target-directory
+wget --input-file=downloadListFile --continue --directory-prefix=target-directory
 ```
 ## curl
 ```bash
@@ -386,3 +474,30 @@ curl https://github.com/ginuerzh/gost/releases/download/v2.11.1/gost-linux-amd64
 # -O, --remote-name: Write output to a local file named like the remote file we get
 curl -O https://github.com/ginuerzh/gost/releases/download/v2.11.1/gost-linux-amd64-2.11.1.gz
 ```
+
+
+
+## 关机/重启
+
+```bash
+# 未保存的内存数据写入硬盘
+sync
+# 立刻关机，其中 now 相当亍时间为 0 的状态
+shutdown -h now
+# 系统在今天的 20:25 分会关机，若在 21:25 才下达此挃令，则隑天才关机
+shutdown -h 20:25
+# 系统再过十分钟后自劢关机
+shutdown -h +10
+# 系统立刻重新启劢
+shutdown -r now
+# 再过三十分钟系统会重新启劢，幵显示后面的讯息给所有在在线的使用者
+shutdown -r +30 'The system will reboot'
+# 仅发出警告，系统并不会关机啦!吓唬人!
+shutdown -k now 'This system will reboot'
+# 重新启劢，关机，断电
+reboot, halt, poweroff
+```
+
+
+
+> https://github.com/jlevy/the-art-of-command-line/blob/master/README-zh.md#%E4%BB%85%E9%99%90-os-x-%E7%B3%BB%E7%BB%9F

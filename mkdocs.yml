@@ -12,12 +12,13 @@ nav:
   - Algorithms:
     - Using a Stack to Evaluate an Expression: 'Algorithms/Using_a_Stack_to_Evaluate_an_Expression.md'
     - Using two stacks to Evaluate an Expression: 'Algorithms/Using two stacks to Evaluate an Expression.md'
-  - Linux:
-    - Linux常用命令: 'Linux/Linux常用命令.md'
-    - Shell Script: 'Linux/Shell Script.md'
+  - Shell:
+    - Shell Command: 'Shell/Shell Command.md'
+    - Shell Script: 'Shell/Shell Script.md'
   - MacOS:
     - Launching Custom Daemons Using launchd: 'MacOS/Launching Custom Daemons Using launchd.md'
     - MacOS常用命令: 'MacOS/MacOS常用命令.md'
+    - MacOS必备: 'MacOS/MacOS必备.md'
   - Unbuntu:
     - Fix “No Wi-Fi Adapter Found” Error on Ubuntu: 'Unbuntu/fix-the-no-wi-fi-adapter-found-error-on-ubuntu.md'
   - Vim:
@@ -35,7 +36,12 @@ nav:
   - Markdown:
     - Markdown Syntax: "Markdown/Markdown Syntax.md"
     - Markdown模版: "Markdown/Markdown模版.md"
-
+  - Git:
+    - Git commands: "Git/Git commands.md"
   - SSH:
+    - SSH command: 'SSH/SSH command.md'
+    - SSH install: 'SSH/SSH install.md'
     - SSH login without password: 'SSH/SSH login without password.md'
+  - Vagrant:
+    - Vagrant tutorial: 'Vagrant/Vagrant tutorial.md'
    

@@ -12,3 +12,17 @@ There are a number of tools available on Linux systems to help you understand an
 -  **objdump.** The mother of all binary tools.Can display all of the informationinan object file. Its most useful function is disassembling the binary instructions in the '.text' section. Common usage: `objdump -dx prog`
 
 - **ldd:** Lists the shared libraries that an executable needs at run time. Common usage: `ldd prog`
+
+- `addr2line`: convert addresses into file names and line numbers.
+```bash
+$ addr2line -e kernel/kernel
+ 	0x0000000080002de2
+  0x0000000080002f4a
+  0x0000000080002bfc
+```
+You should see something like this:
+```
+  kernel/sysproc.c:74
+  kernel/syscall.c:224
+  kernel/trap.c:85
+```

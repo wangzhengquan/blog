@@ -1,6 +1,6 @@
-Infix Expressions are harder for Computers to evaluate because of the additional work needed to decide precedence. Infix notation is how expressions are written and recognized by humans and, generally, input to programs. Given that they are harder to evaluate, they are generally converted to one of the two remaining forms. A very well known algorithm for converting an infix notation to a postfix notation is [Shunting Yard Algorithm](https://en.wikipedia.org/wiki/Shunting_yard_algorithm) by Edgar Dijkstra. 
+Infix Expressions are harder for Computers to evaluate because of the additional work needed to decide precedence. Infix notation is how expressions are written and recognized by humans and, generally, input to programs. Given that they are harder to evaluate, they are generally converted to one of the two remaining forms. A very well known algorithm for converting an infix notation to a postfix notation is [Shunting Yard Algorithm](https://en.wikipedia.org/wiki/Shunting_yard_algorithm) by Edgar Dijkstra.
 
-This algorithm takes as input an Infix Expression and produces a queue that has this expression converted to postfix notation. The same algorithm can be modified so that it outputs the result of the evaluation of expression instead of a queue. The trick is using two stacks instead of one, one for operands, and one for operators. 
+This algorithm takes as input an Infix Expression and produces a queue that has this expression converted to postfix notation. The same algorithm can be modified so that it outputs the result of the evaluation of expression instead of a queue. The trick is using two stacks instead of one, one for operands, and one for operators.
 
 ```
 1. While there are still tokens to be read in,
@@ -34,7 +34,7 @@ This algorithm takes as input an Infix Expression and produces a queue that has 
   stack should have only one value in it, which is the final result.
 ```
 
-Implementation: It should be clear that this algorithm runs in linear time – each number or operator is pushed onto and popped from Stack only once. 
+Implementation: It should be clear that this algorithm runs in linear time – each number or operator is pushed onto and popped from Stack only once.
 
 ```java
 /**
@@ -164,7 +164,8 @@ public class CalculatorX {
     System.out.println(CalculatorX.evaluate("2^3"));
   }
 }
-
 ```
 
-> [https://www.geeksforgeeks.org/expression-evaluation/](https://www.geeksforgeeks.org/expression-evaluation/)
+> <https://www.geeksforgeeks.org/expression-evaluation/>
+
+\

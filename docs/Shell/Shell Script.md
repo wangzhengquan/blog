@@ -11,12 +11,28 @@ Remark: both side of '=' can't have white space.
 
 ```bash
 # declaration function
-function buildln() {
-  echo dir = ${1}
-  
+function recurse() {
+  local dir=${1}
+ # ls ${1}
+  #cd ${1}
+  for file in `ls ${dir}`
+  do
+    if [[ -d ${dir}/$file ]]; then
+        recurse ${dir}/$file
+    elif [[ -f ${dir}/$file ]]; then
+        if [[ $file == *.xml ]]
+        then
+           echo ${dir}/${file} 
+           #echo rename ${dir}/${file}
+        fi
+    else
+        echo "$file is not valid"
+        exit 1
+    fi
+  done
 }
 # call function
-buildln ~/wk/nand2tetris/projects/01
+recurse ~/wk/nand2tetris/projects
 ```
 
 ## Loop Statement
@@ -26,6 +42,23 @@ for file in `ls ~/wk/nand2tetris/projects/01`
 do
   echo ${file}
 done
+```
+
+```bash
+for file in $(find . -name "*.c")
+do
+  filename=${file%.c}
+  echo $filename.cpp
+done
+
+```
+
+```bash
+for (( i=0; i<10; i++ ))
+do
+  echo $i 
+done
+
 ```
 
 

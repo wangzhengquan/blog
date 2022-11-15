@@ -1,8 +1,7 @@
-		
-
 ## Source Code
 
 map.c
+
 ```c
 #include <stdio.h>
 #include <stdlib.h>
@@ -35,7 +34,6 @@ int main(int argc, char *argv[]) {
     recur(n);
     return 0;
 }
-
 ```
 
 recurse.c
@@ -54,10 +52,10 @@ int recur(int i) {
 
     return 0;
 }
-
 ```
 
 ## Compiling
+
 You have to tell your compiler to compile your code with symbolic debugging information included. Here's how to do it with gcc, with the -g switch:
 
 ```
@@ -65,25 +63,38 @@ gcc -g map.c recurse.c -o map
 ```
 
 ## Starting The Debugger
+
 To start the gdb and pass arguments, type the command in the terminal
+
 ```
 gdb --args <program> <args...>
 ```
-If the program has no arguments, just type 
+
+If the program has no arguments, just type
 
 ```
 gdb  <program>
 ```
+
 Fot this demo, we launch a program called map in the debugger and pass argument 5.
+
 ```
 $ gdb --args map 5
 ```
+
 ## Breakpoints
 
 ### Break point
- To set a new breakpoint, You use the break or b command, and specify a location, which can be a function name,  line number, or source file:line number.
-```
+
+To set a new breakpoint, You use the break or b command, and specify a location, which can be a function name,  line number, or source file:line number.
+
+```bash
 break <where>
+```
+
+Temporary break point
+```bash
+tbreak <where>
 ```
 
 Where
@@ -91,16 +102,22 @@ Where
 * line_number
 * function_name
 * file:line_number/function_name
+* `*instructionAddr`
 
 For this demo, let's set a breakpoint at main(), and start the program:
-
 
 ```
 (gdb) break main
 Breakpoint 1 at 0x6e9: file map.c, line 18.
 ```
 
+set breakpoint at special instruction address
+```bash
+break *0x000000008000215a
+```
+
 when you type `run` command , program will suspend at the first break point it encounter.
+
 ```
 (gdb) run
 Starting program: /home/vagrant/code/personal/hw-intro/map 5
@@ -112,13 +129,14 @@ Breakpoint 1, main (argc=2, argv=0x7fffffffe3a8) at map.c:18
 
 
 ### Condition break point
-```
+
+```bash
 break <where> if <condition> 
 ```
+
 Break at the given location if the condition is met. Conditions may be almost any C expression that evaluate to true or false.
 
-
-```
+```bash
 (gdb) break recur if i==1
 Breakpoint 2 at 0x55555555475e: file recurse.c, line 5.
 (gdb) continue
@@ -130,17 +148,17 @@ Breakpoint 2, recur (i=1) at recurse.c:5
 $1 = 1
 ```
 
-### Set/change the condition 
+### Set/change the condition
 
 ```
 condition <breakpoint#> <condition> 
 ```
-Set/change the condition of an existing breakpoint.
+
+Set/change a condition on anexisting breakpoint.
+
 ```
 (gdb) condition 2 i==0
 ```
-
-
 
 ## Watchpoints
 
@@ -176,12 +194,12 @@ main (argc=2, argv=0x7fffffffe3a8) at map.c:22
 (gdb) 
 ```
 
-
 ## Stepping
 
 ### Next statement
 
 Step N statements, proceeding through subroutine calls.
+
 ```
 next [N]
 ```
@@ -195,10 +213,11 @@ the call, in effect treating it as a single source line.
 19	    else n = atoi(argv[1]);
 (gdb) 
 ```
+
 Hitting Enter key will repeat the last command, this will save you typing `next` over and over again.
 
-
 ### Step into subroutine
+
 ```
 step [N]
 ```
@@ -213,11 +232,25 @@ recur (i=5) at recurse.c:5
 (gdb) 
 ```
 
+### Next instruction
+Step a single assembly instruction, but proceed through subroutine calls.
+```
+nexti [N]
+```
+
+### Step instruction
+Step a single assembly instruction if it's a subroutine call it will enter into the function.
+```
+stepi [N]
+```
+
+
 ### finish
 
 ```
 finish
 ```
+
 Continue until the current function returns.
 
 ### continue
@@ -225,11 +258,11 @@ Continue until the current function returns.
 ```
 continue
 ```
+
 Continue normal execution until the end of programe or the next breakpoint.
 
-
-
 ### Advance
+
 ```
 advance <where>
 ```
@@ -242,20 +275,8 @@ recur (i=5) at recurse.c:5
 5	    int j = i;
 (gdb) 
 ```
+
 advance is just shorthand for "continue to this temporary breakpoint."
-
-
-### Next instruction
-```
-nexti [N]
-```
-Step a single assembly instruction, but proceed through subroutine calls.
-
-### Step instruction
-```
-stepi [N]
-```
-Step a single assembly. It means that if it's a subroutine call it will enter into the function.
 
 
 ## Examining Variables and memory
@@ -263,11 +284,12 @@ Step a single assembly. It means that if it's a subroutine call it will enter in
 ### Print Variables
 
 Print content of variable/memory location/register.
+
 ```
 print/format <what>
 ```
 
-Format  
+Format
 
 * a: Pointer.
 * c: Read as integer, print as character. d Integer, signed decimal.
@@ -278,7 +300,6 @@ Format
 * u: Integer, unsigned decimal.
 * x: Integer, print as hexadecimal.
 
-
 What
 
 * "expression" Almost any C expression, including function calls (must be prefixed with a cast to tell GDB the return value type).
@@ -287,7 +308,6 @@ What
 * "{type}address" Content at address, interpreted as being of the C type type.
 * "$register" Content of named register. Interesting registers are $esp (stack pointer), $ebp (frame pointer) and $eip (instruction pointer).
 
-
 ```
 (gdb) print n
 $1 = 5
@@ -295,27 +315,32 @@ $1 = 5
 $2 = 101
 ```
 
-printf
+### printf
+
 ```
 (gdb) printf "%08X\n", n
 00000005
 ```
 
 ### Print Array
+
 ```
 print *array@len
 ```
 
-Print the first 3 elements of the Array
+For example, Print the first 3 elements of the Array
+
 ```
-(gdb) print arr[0]@3
+(gdb) print *arr@3
 $4 = {1, 2, 3}
 ```
 
 ### Display Variables
+
 ```
 display/format <what>
 ```
+
 Like `print`, but print the information after each stepping instruction.
 
 For this demo
@@ -336,18 +361,17 @@ For this demo
 
 ```
 x/nfu <address> 
-
 ```
-* n: How many units to print (default 1). 
-* f: Format character (like „print“).
-* u: Unit.  
-		   Unit is one of:   
-			 b: Byte  
-			 h: Half-word (two bytes)  
-			 w: Word (four bytes)  
-			 g: Giant word (eight bytes)).  
 
-For this demo,
+* n: How many units to print (default 1).
+* f: Format character (like "print“).
+* u: Unit. Unit is one of:  
+      * b: Byte  
+      * h: Half-word (two bytes)  
+      * w: Word (four bytes)  
+      * g: Giant word (eight bytes))  
+
+For example,
 
 ```
 (gdb) x buf1
@@ -356,9 +380,15 @@ For this demo,
 0x555555756260:	0x68	0x65	0x6c	0x6c	0x6f	0x20	0x77	0x6f
 0x555555756268:	0x72	0x6c	0x64
 ```
+Examining instruaction at specify adress
+```
+x/i 0x123
+```
 
 ## Examining the call stack
+
 Show call stack.
+
 ```
 backtrace [full]
 ```
@@ -367,23 +397,24 @@ The command `backtrace` (or `bt`) will show you the current function call stack,
 
 Use of the 'full' qualifier also prints the values of the local variables.
 
-
 ```
 (gdb) backtrace
 #0  recur (i=3) at recurse.c:5
 #1  0x0000555555554832 in recur (i=4) at recurse.c:9
 #2  0x0000555555554832 in recur (i=5) at recurse.c:9
 #3  0x00005555555547dd in main (argc=2, argv=0x7fffffffe3a8) at map.c:29
-
 ```
 
 ## directory
+
 ```
 directory <directory>
 ```
+
 Add directory to the list of directories that is searched for sources.
 
 ## Listing Source Code
+
 ```
 list
 list <filename>:<function> 
@@ -406,10 +437,13 @@ Shows the current or given source context. The filename may be omitted. If last 
 ```
 
 ## Call function
+
 ```
 call functionName(args...)
 ```
+
 execute arbitrary function and print the result.
+
 ```
 (gdb) call recur(3)
 $1 = 0
@@ -417,20 +451,25 @@ $1 = 0
 
 ## Informations
 
-* info breakpoints: Print informations about the breakpoints and watchpoints.
-* info registers: Print values of all registers.
-* info args: Print the arguments to the function of the current stack frame.
-* info display: Print informations about the „displays“.
-* info locals: Print the local variables in the currently selected stack frame.
-* info sharedlibrary: List loaded shared libraries.
-* info signals: List all signals and how they are cur- rently handled.
-* info threads: List all threads.
+* `info breakpoints`: Print informations about the breakpoints and watchpoints.
+* `info registers`: Print values of all registers.
+* `info args`: Print the arguments to the function of the current stack frame.
+* `info locals`: Print the local variables in the currently selected stack frame.
+* `info display`: Print informations about the "displays“.
+* `info sharedlibrary`: List loaded shared libraries.
+* `info signals`: List all signals and how they are cur- rently handled.
+* `info threads`: List all threads.
+* `info frame`:
+
 
 ## Disassemble
+
 Disassemble the current function or given location.
+
 ```
 disassemble <where>
 ```
+
 For this demo, I have enter into recur function, then I execute `disassemble`, gdb print out the assembly code of this "recur" function.
 
 ```
@@ -458,12 +497,11 @@ Dump of assembler code for function recur:
    0x0000555555554839 <+65>:	leaveq 
    0x000055555555483a <+66>:	retq   
 End of assembler dump.
-
 ```
-
 
 ## Layout
 
+* `tui enable` show tui window.
 * `layout src`	Standard layout—source on top, command window on the bottom
 * `layout asm`	Just like the "src" layout, except it's an assembly window on top
 * `layout split`	Three windows: source on top, assembly in the middle, and command at the bottom
@@ -474,41 +512,59 @@ End of assembler dump.
 * `tui reg next`	Show the next page of registers—this is important because there might be pages of registers that aren't in the "general", "float", or "system" sets
 
 For this demo, when you type `layout asm` command ,you will see the interface as following
-![layout asm](./img/AsmLayout.png)
+ ![layout asm](./img/AsmLayout.png)
 
 In asm layout , we can use `nexti` or `stepi`   command to step to the next asm instruction
 
+When "layout" command split the window into diffrent pieces, we can use 'focus' command to specify which window to focus, for example use `focus asm` to select asm window, then you can use arrow key to scroll the window.
+
+
 ## Help
+
 `help command`	Get help on a certain command
 For example
+
 ```
 help breakpoint 
 ```
 
-
 ## GDB dashboard
 
-[GDB dashboard](https://github.com/cyrus-and/gdb-dashboard) is a standalone ".gdbinit" file. 
+[GDB dashboard](https://github.com/cyrus-and/gdb-dashboard) is a standalone ".gdbinit" file.
 Just place ".gdbinit" in your home directory or project directory, for example with:
+
 ```
 wget -P ~ https://git.io/.gdbinit
 ```
+
 Then debug as usual, the dashboard will appear automatically every time the inferior program stops.
 
 Optionally install Pygments to enable syntax highlighting:
+
 ```
 pip install pygments
 ```
 
 If it has no effect, execute the following command in the terminal
+
 ```
 set auto-load local-gdbinit on
 ```
 
-## Some other commands
-![Commands](./img/commands1.jpg)
+## LLDB
 
-> [https://beej.us/guide/bggdb](https://beej.us/guide/bggdb)  
-  [https://wiki.ubuntu.org.cn/用GDB调试程序](https://wiki.ubuntu.org.cn/用GDB调试程序)  
-  [http://www.unknownroad.com/rtfm/gdbtut/gdbtoc.html](http://www.unknownroad.com/rtfm/gdbtut/gdbtoc.html)  
-  [Official documentation](https://sourceware.org/gdb/current/onlinedocs/gdb/)
+In MacOS use [LLDB](https://lldb.llvm.org/use/map.html) instead.
+
+## Some other commands
+
+ ![Commands](./img/commands1.jpg)
+
+
+> https://beej.us/guide/bggdb
+  https://wiki.ubuntu.org.cn/用GDB调试程序
+  http://www.unknownroad.com/rtfm/gdbtut/gdbtoc.html
+  https://sourceware.org/gdb/current/onlinedocs/gdb
+
+
+
+
