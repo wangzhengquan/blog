@@ -8,9 +8,12 @@
 ## 查看端口占用
 
 ```
-lsof -i :8080
+lsof -i:8080
+
+kill -9 $(lsof -t -i:8080)
 ```
 
 ## 输出到剪切版
-
+```
 echo hello | pbcopy
+```

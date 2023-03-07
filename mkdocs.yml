@@ -6,7 +6,7 @@ plugins:
   - minify:
       minify_html: true
       htmlmin_opts:
-          remove_comments: true
+        remove_comments: true
 nav: 
   - 简介: 'index.md'
   - Algorithms:
@@ -30,9 +30,11 @@ nav:
     - GCC Linking: 'GCC/GCC Linking.md'
     - Tools for Manipulating Object Files: 'GCC/Tools for Manipulating Object Files.md'
   - GDB:
-    - gdb demo: 'GDB/gdb demo/gdb demo.md'
+    - gdb demo: 'GDB/gdb demo.md'
     - Summary of GDB commands: 'GDB/gdbnotes-x86-64.pdf'
     - GDB Cheat Sheet: 'GDB/GDB Cheat Sheet.pdf'
+  - Assembly:
+    - Inline assembly for x86: 'assembly/Inline assembly for x86.md'
   - Markdown:
     - Markdown Syntax: "Markdown/Markdown Syntax.md"
     - Markdown模版: "Markdown/Markdown模版.md"

@@ -246,20 +246,16 @@ stepi [N]
 
 
 ### finish
-
+Continue until the current function returns.
 ```
 finish
 ```
 
-Continue until the current function returns.
-
 ### continue
-
+Continue normal execution until the end of programe or the next breakpoint.
 ```
 continue
 ```
-
-Continue normal execution until the end of programe or the next breakpoint.
 
 ### Advance
 
@@ -380,9 +376,11 @@ For example,
 0x555555756260:	0x68	0x65	0x6c	0x6c	0x6f	0x20	0x77	0x6f
 0x555555756268:	0x72	0x6c	0x64
 ```
-Examining instruaction at specify adress
+
+
+To examine instructions in memory (besides the immediate next one to be executed, which GDB prints automatically), you use the `x/i` command. This command has the syntax `x/Ni ADDR`, where N is the number of consecutive instructions to disassemble and ADDR is the memory address at which to start disassembling.
 ```
-x/i 0x123
+x/10i
 ```
 
 ## Examining the call stack
@@ -512,7 +510,7 @@ End of assembler dump.
 * `tui reg next`	Show the next page of registers—this is important because there might be pages of registers that aren't in the "general", "float", or "system" sets
 
 For this demo, when you type `layout asm` command ,you will see the interface as following
- ![layout asm](./img/AsmLayout.png)
+ ![layout asm](./img/demo/AsmLayout.png)
 
 In asm layout , we can use `nexti` or `stepi`   command to step to the next asm instruction
 
@@ -557,7 +555,7 @@ In MacOS use [LLDB](https://lldb.llvm.org/use/map.html) instead.
 
 ## Some other commands
 
- ![Commands](./img/commands1.jpg)
+ ![Commands](./img/demo/commands1.jpg)
 
 
 > https://beej.us/guide/bggdb

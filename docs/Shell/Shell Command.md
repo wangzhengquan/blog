@@ -278,7 +278,7 @@ grep -o -i 'word' test.txt | wc -l
 ## find
 
 ```bash
-find . -name "*nng*" -exec rm -rf {} \;
+find ./ -name "*nng*" -exec rm -rf {}
 
 find /usr/{lib,libexec} -name \*.la -delete
 
@@ -498,6 +498,8 @@ shutdown -k now 'This system will reboot'
 reboot, halt, poweroff
 ```
 
+Reference:
+>[ Linux system administration](https://developer.ibm.com/tutorials/l-lpic1-map/)
 
 
 > https://github.com/jlevy/the-art-of-command-line/blob/master/README-zh.md#%E4%BB%85%E9%99%90-os-x-%E7%B3%BB%E7%BB%9F
