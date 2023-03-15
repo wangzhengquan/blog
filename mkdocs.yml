@@ -24,7 +24,7 @@ nav:
   - Vim:
     - Vim常用命令: 'Vim/vim常用命令.md'
   - 编辑器:
-    - Sublime: '编辑器/Sublime.md'
+    - Sublime: 'editor/Sublime.md'
   - GCC:
     - GCC compiling processes: 'GCC/GCC compiling processes.md'
     - GCC Linking: 'GCC/GCC Linking.md'
@@ -33,8 +33,11 @@ nav:
     - gdb demo: 'GDB/gdb demo.md'
     - Summary of GDB commands: 'GDB/gdbnotes-x86-64.pdf'
     - GDB Cheat Sheet: 'GDB/GDB Cheat Sheet.pdf'
-  - Assembly:
-    - Inline assembly for x86: 'assembly/Inline assembly for x86.md'
+  - 编程语言:
+    - Assembly:
+      - Inline assembly for x86: 'ProgramingLanguage/assembly/Inline assembly for x86.md'
+    - C:
+      - C语言要点: 'ProgramingLanguage/C/C_takeaway.md'
   - Markdown:
     - Markdown Syntax: "Markdown/Markdown Syntax.md"
     - Markdown模版: "Markdown/Markdown模版.md"
