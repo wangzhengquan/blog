@@ -9,4 +9,5 @@ https://eagain.net/articles/git-for-computer-scientists/
 https://mirrors.edge.kernel.org/pub/software/scm/git/docs/user-manual.html
 
 
-https://docs.github.com/en/get-started/using-git/about-git
+tutorial: https://docs.github.com/en/get-started/using-git/about-git
+
