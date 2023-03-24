@@ -38,6 +38,10 @@ nav:
       - Inline assembly for x86: 'ProgramingLanguage/assembly/Inline assembly for x86.md'
     - C:
       - C语言要点: 'ProgramingLanguage/C/C_takeaway.md'
+  - 收藏:
+    - AI Tools: "save/ai_tools.md"
+    - 网络大学: "save/online_university.md"
+    - 网址收藏: "save/web_site.md"
   - Markdown:
     - Markdown Syntax: "Markdown/Markdown Syntax.md"
     - Markdown模版: "Markdown/Markdown模版.md"
