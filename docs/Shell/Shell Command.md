@@ -200,7 +200,7 @@ ps -ef | grep "kucker" | awk  '{print $2}' | xargs -i sudo kill -9 {}
 ```
 
 ## 网络
-查询域名IP
+### 查询域名IP
 ```bash
 dig +norecurse @a.root-servers.net any yahoo.com
 dig +norecurse @e.gtld-servers.net any yahoo.com
@@ -209,14 +209,24 @@ dig +norecurse @ns1.yahoo.com any yahoo.com
 nslookup yahoo.com
 nslookup -type=NS yahoo.com
 nslookup yahoo.com  ns2.yahoo.com
-
-netstat -a --inet
-netstat -tlunp
-
-tcpdump -t -N 'port 80'
-
 ```
 
+### netstat
+
+```bash
+netstat -a --inet
+netstat -tlunp # The -tlnp options specify that netstat should display TCP connections (-t), show the local address and port numbers in numeric form (-n), and display the PID and name of the process that is occupying each port (-p).
+
+
+# 查找并关闭指定端口的进程
+netstat -tulnp | grep :${PORT} | awk  '{print $7}' | awk -F/  '{print $1}' | xargs -i kill  {}
+netstat -tlnp | grep :${PORT} | awk '{print $7}' | cut -d'/' -f1 | xargs -i kill  {}
+```
+
+### tcpdump
+```
+tcpdump -t -N 'port 80'
+```
 
 
 ## 文件
@@ -256,7 +266,7 @@ cd wzq~
 ```
 
 
-## grep
+### grep
 
 替换或删除跨越多个目录的多个文件里的指定文本
 ```bash
@@ -275,8 +285,7 @@ grep -rl 'windows' ./ | xargs sed -i ''   '/windows/d'
 grep -o -i 'word' test.txt | wc -l
 ```
 
-## find
-
+### find
 ```bash
 find ./ -name "*nng*" -exec rm -rf {}
 
@@ -287,9 +296,7 @@ find /usr -depth -name $(uname -m)-lfs-linux-gnu\* | xargs rm -rf
 find $(1) -not -type d -and -not -type l -print0 | xargs -0r chmod $(FILE_MODE)
 ```
 
-## diff
-
-
+### diff
 ```bash
 方法一：
 diff -bur [oldDir] [newDir]
