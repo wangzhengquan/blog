@@ -230,6 +230,68 @@ All other text objects can also be used to operate on the text inside the tag
 
 在命令中可以作为行号使用 ，例如： `'m,.s/the/THE/g`
 
+## Tab页
+- 配置
+
+set tabpagemax=18 VIM默认只能打开10个标签页，在配置文件可以修改这个限制：
+
+set showtabline=0 不显示标签栏
+set showtabline=1 这是默认设置，意思是，在创建标签页后才显示标签栏。
+set showtabline=2 总是显示标签栏
+
+- 命令行命令：
+
+:tabe filename 用标签页打开文件
+:tabnew filename 用标签页打开文件
+:tab split 用标签页打开当期编辑的文件
+:tabf filename* 用标签页打开与通配符匹配的一个文件
+:tabs 显示所有标签页，> 指示当前页，+ 显示修改未保存
+
+:tabc 关闭当前标签页，功能等同于:q
+:tabo 关闭所有标签页
+:tabn 跳转后一个标签页
+:tabp 跳转前一个标签页
+:tabfirst 跳转第一个标签页
+:tabr 跳转第一个标签页
+:tablast 跳转最后一个标签页
+:tabm 0/1/2 将当前标签页移动到第1/2/3个页面位置
+:tabdo 对多个标签页同时执行命令，如
+:tabdo %s/aaa/bbb/g
+
+- 操作命令:
+
+gt 跳转后一个标签页
+gT 跳转前一个标签页
+
+## 分屏
+### 分屏启动Vim
+- vim -On file1 file2 ...使用大写的O参数来垂直分屏。
+- vim -on file1 file2 ...使用小写的o参数来水平分屏。
+
+注释: n是数字，表示分成几个屏。
+
+### 分屏操作
+- Ctrl+W s上下分割当前打开的文件。
+- :sp filename上下分割，并打开一个新的文件。
+- Ctrl+W v 左右分割当前打开的文件。
+- :vsp filename 左右分割，并打开一个新的文件。
+
+### 关闭分屏
+- Ctrl+W c 关闭当前窗口。
+- Ctrl+W q 关闭当前窗口，如果只剩最后一个了，则退出Vim。
+
+### 切换分屏
+Vi中的光标键是h, j, k, l，要在各个屏间切换，只需要先按一下Ctrl+W
+
+- Ctrl+W l 把光标移到右边的屏。
+- Ctrl+W h 把光标移到左边的屏中。
+- Ctrl+W k 把光标移到上边的屏中。
+- Ctrl+W j 把光标移到下边的屏中。
+- Ctrl+W w 把光标移到下一个的屏中。
+
+### 改变分屏大小
+:[vertical] res[ize] [N]
+
 
 ## 编辑指定文件
 * ` :e[!] [filename] ` 编辑filename指定的文件，如果不指定filename，继续编辑当前文件(load文件到当前缓冲区即编辑区，可做刷新文件用)

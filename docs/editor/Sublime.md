@@ -48,8 +48,6 @@ To go from multiple selections to a single selection, press Esc.
 
 
 ### Column Selection
-
-
 Column selection can be used to select a rectangular area of a file. Column selection doesn’t operate via a separate mode, instead it makes use of multiple selections.
 
 You can use additive selections to select multiple blocks of text, or subtractive selections to remove a block.

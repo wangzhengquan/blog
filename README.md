@@ -5,7 +5,6 @@ GitHub Actions workflow:
 https://docs.github.com/en/actions  
 https://docs.github.com/en/actions/quickstart  
 
-[git study](https://git-scm.com/book/en/v2/Git-Branching-Rebasing)
 
 [mkdocs](https://www.mkdocs.org/)
 

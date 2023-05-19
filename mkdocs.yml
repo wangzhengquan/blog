@@ -25,6 +25,7 @@ nav:
     - Vim常用命令: 'Vim/vim常用命令.md'
   - 编辑器:
     - Sublime: 'editor/Sublime.md'
+    - VSCode: 'editor/VSCode.md'
   - GCC:
     - GCC compiling processes: 'GCC/GCC compiling processes.md'
     - GCC Linking: 'GCC/GCC Linking.md'
