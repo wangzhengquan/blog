@@ -38,6 +38,10 @@ CS144
 ## 数据库
 CMU-15445
 https://15445.courses.cs.cmu.edu/fall2020/
+https://15445.courses.cs.cmu.edu/fall2022
+https://github.com/Sorosliu1029/Database-Systems
+
+CMU-15721
 https://15721.courses.cs.cmu.edu/spring2020/
 
 
@@ -46,6 +50,10 @@ https://15721.courses.cs.cmu.edu/spring2020/
 mit6.824. 
 https://github.com/isdanni/mit6.824
 https://pdos.csail.mit.edu/6.824/schedule.html
+
+DDIA 作者 @martinkl 关于分布式系统的公开课
+ https://twitter.com/madawei2699/status/1451837146097020928
+ https://www.youtube.com/playlist?list=PLeKd45zvjcDFUEv_ohr_HdUFe97RItdiB
 
 
 ## AI：
