@@ -8,6 +8,8 @@ edX :—免费可学来自全球顶尖大学（包括MIT和哈佛大学）的课
 
 - [MIT Open Courseware](https://ocw.mit.edu/courses/): —创建于 2002年，免费提供几乎所有MIT课程的完整材料。
 
+- [udemy](https://www.udemy.com/)
+
 Open Yale Courses —提供耶鲁大学的课程，既有传统的网络公开课，也有MOOC。
 
 Open Learning Initiative —卡麦基梅隆大学的一个开放计划。
@@ -33,7 +35,7 @@ University of the People — 这是一间免学费的线上大学。
 - [udacity](https://www.udacity.com/courses/all)
 
 编程学习： https://codeinplace.stanford.edu/
-英文学习: https://magoosh.com/
+
 
 CS自学指南: https://csdiy.wiki/
 

@@ -170,23 +170,6 @@ file /bin/ls
 get_conf LONG_BIT
 ```
 
-## man -  Manual Pages
-If you want the man page for a single program/command, you can run:
-```bash
-man command_name | less
-```
-Hit q to exit the man page and get back to your terminal prompt.
-
-查找系统内跟passwd有关的说明
-```bash
-man -f passwd
-```
-
-If you want to search the man pages for a command that pertains to a keyword:
-```bash
-man -k single_keyword | less
-```
-This command will search the manual pages for a command with the keyword 'single_keyword'. Forget how to open files in Vim? You can search for 'editor' and get a list of all editor-related commands on your system.
 
 ### 系统进程
 ```bash
@@ -313,10 +296,12 @@ diff -y [oldDir] [newDir]
  [https://www.grymoire.com/Unix/Sed.html](https://www.grymoire.com/Unix/Sed.html)
 
 ## 压缩与打包
+### tar
 ```bash
-[dmtsai@study ~]$ tar [-z|-j|-J] [cv] [-f 待建立的新檔名] filename... <==打包與壓縮
-[dmtsai@study ~]$ tar [-z|-j|-J] [tv] [-f 既有的 tar檔名]             <==察看檔名
-[dmtsai@study ~]$ tar [-z|-j|-J] [xv] [-f 既有的 tar檔名] [-C 目錄]   <==解壓縮
+$ tar [-z|-j|-J] [cv] [-f tarfile] <files or directory to be compressed>   # 打包與壓縮
+$ tar [-z|-j|-J] [tv] [-f tarfile]              # 察看檔名
+$ tar [-z|-j|-J] [xv] [-f tarfile] [-C 目錄]     # 解壓縮
+
 選項與參數：
 -c  ：建立打包檔案，可搭配 -v 來察看過程中被打包的檔名(filename)
 -t  ：察看打包檔案的內容含有哪些檔名，重點在察看『檔名』就是了；
@@ -336,37 +321,65 @@ diff -y [oldDir] [newDir]
 --exclude=FILE：在壓縮的過程中，不要將 FILE 打包！ 
 ```
 
-壓　縮：tar -jcv -f filename.tar.bz2 要被壓縮的檔案或目錄名稱
-查　詢：tar -jtv -f filename.tar.bz2
-解壓縮：tar -jxv -f filename.tar.bz2 -C 欲解壓縮的目錄
+
+
+- 壓　縮：`tar -jcv -f filename.tar.bz2 <files or directory to be compressed>`  
+- 查　詢：`tar -jtv -f filename.tar.bz2 ` 
+- 解壓縮：`tar -jxv -f filename.tar.bz2 -C <destination> `
 
 
 实例：
+
+解压各类tar文件
 ```bash
-# 解压tar.bz2文件
 tar xvfj ./linux-2.6.23.tar.bz2 
 tar xvfJ ./linux-2.6.23.tar.xz
 tar xvfz ./linux-2.6.23.tar.gz
 tar -xf ./linux-2.6.23.tar.*
-
-
-# 解压python-3.9.0-docs-html.tar.bz2到/usr/share/doc/python-3.9.0/html
-tar --strip-components=1 \
---no-same-owner \
---no-same-permissions \
--C /usr/share/doc/python-3.9.0/html \
--xvf ../python-3.9.0-docs-html.tar.bz2
-
-# --no-same-owner and --no-same-permissions
-# Ensure the installed files have the correct ownership and permissions.
-# Without these options, using tar will install the package files with the upstream creator's values.
-
-# 当前目录压缩打包到/home/wzq/lfs/lfs-2.tar.xz
-tar -cJpf /home/wzq/lfs/lfs-2.tar.xz .
-# 解压导当前目录
-tar -xpf $HOME/lfs-temp-tools-10.0-systemd.tar.xz
+tar -xpf ./linux-2.6.23.tar.*
 ```
 
+当前目录压缩打包到/home/wzq/lfs/lfs-2.tar.xz
+```bash
+tar -cJpf /home/wzq/lfs/lfs-2.tar.xz .
+```
+
+
+解压python-3.9.0-docs-html.tar.bz2到/usr/share/doc/python-3.9.0/html
+```bash
+tar --strip-components=1 \
+    --no-same-owner \
+    --no-same-permissions \
+    -C /usr/share/doc/python-3.9.0/html \
+    -xvf ../python-3.9.0-docs-html.tar.bz2
+```
+`--no-same-owner` and `--no-same-permissions` Ensure the installed files have the correct ownership and permissions. Without these options, using tar will install the package files with the upstream creator's values.
+
+
+### zip
+
+```bash
+$ zip project0-submission.zip \
+    src/include/primer/p0_trie.h \
+    src/primer/p0_trie.c
+```
+
+```bash
+$ zip -j submission.zip placeholder/*.sql
+```
+The `-j` flag lets you compress all the sql files in the zip file without path information.  
+
+
+```bash
+$ zip -rj project12.zip src/*.jack
+```
+Travel the src directory  recursively and compress all the jack file in the zip file without path information. 
+
+
+You can verify the contents of your file using the unzip command. 
+```
+$ unzip -l project0-submission.zip
+```
 
 ## User
 
@@ -467,21 +480,40 @@ sudo -i
 find /home -name .bashrc > list 2>&1 
 ```
 
-
-## wget
+## Download
+### wget
 ```bash
-wget --input-file=downloadListFile --continue --directory-prefix=target-directory
+wget --input-file=<download-list-file> --continue --directory-prefix=<target-directory>
 ```
-## curl
+
+### curl
 ```bash
- 
-#-o, --output <file>: Write  output  to <file> instead of stdout.
 curl https://github.com/ginuerzh/gost/releases/download/v2.11.1/gost-linux-amd64-2.11.1.gz --output gost.gz
+```
+`-o, --output <file>`: Write  output  to `<file>` instead of stdout.
  
-# -O, --remote-name: Write output to a local file named like the remote file we get
+```bash
 curl -O https://github.com/ginuerzh/gost/releases/download/v2.11.1/gost-linux-amd64-2.11.1.gz
 ```
+`-O, --remote-name`: Write output to a local file named like the remote file we get.
 
+## man -  Manual Pages
+If you want the man page for a single program/command, you can run:
+```bash
+man command_name | less
+```
+Hit q to exit the man page and get back to your terminal prompt.
+
+查找系统内跟passwd有关的说明
+```bash
+man -f passwd
+```
+
+If you want to search the man pages for a command that pertains to a keyword:
+```bash
+man -k single_keyword | less
+```
+This command will search the manual pages for a command with the keyword 'single_keyword'. Forget how to open files in Vim? You can search for 'editor' and get a list of all editor-related commands on your system.
 
 
 ## 关机/重启

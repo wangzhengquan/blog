@@ -3,6 +3,17 @@
 
 注册+翻墙：https://silentming.net/blog/2023/03/27/using-cfwraper/
 
+注册chatGPT: https://medium.com/@dykaknsjwkmsmwm/%E5%A6%82%E4%BD%95%E6%B3%A8%E5%86%8C%E4%B8%80%E4%B8%AAchatgpt%E8%B4%A6%E5%8F%B7-99646c841fb4
+
+
+waitlist:https://openai.com/waitlist/gpt-4-api
+
+付费卡：
+https://twitter.com/Cydiar404/status/1637047977541009408
+https://twitter.com/lewangdev/status/1628802873013465088
+
+
+
 ## prompts
 
 [ ChatGPT Prompt 视频教程](https://learn.deeplearning.ai/chatgpt-prompt-eng/lesson/2/guidelines)
@@ -16,6 +27,7 @@ https://github.com/PlexPt/awesome-chatgpt-prompts-zh
 - [chatgpt](https://chat.openai.com)
 - claude
 - https://poe.com/ChatGPT
+- https://chat-gpt.com/chat
 
 
 ## chatbot-ui

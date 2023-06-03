@@ -1,6 +1,6 @@
 CS  Curriculum
  
-151  
+CS151  
 
 CS107e
 
@@ -46,10 +46,12 @@ https://15721.courses.cs.cmu.edu/spring2020/
 
 
 
+
 ## 分布式系统 
 mit6.824. 
 https://github.com/isdanni/mit6.824
 https://pdos.csail.mit.edu/6.824/schedule.html
+https://github.com/Sorosliu1029/6.824
 
 DDIA 作者 @martinkl 关于分布式系统的公开课
  https://twitter.com/madawei2699/status/1451837146097020928
