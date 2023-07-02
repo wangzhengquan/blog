@@ -686,8 +686,9 @@ In MacOS use [LLDB](https://lldb.llvm.org/use/map.html) instead.
 > https://beej.us/guide/bggdb
   https://wiki.ubuntu.org.cn/用GDB调试程序
   http://www.unknownroad.com/rtfm/gdbtut/gdbtoc.html
-  https://sourceware.org/gdb/current/onlinedocs/gdb  
-  https://www.techbeamers.com/how-to-use-gdb-top-debugging-tips/  
+  https://sourceware.org/gdb/current/onlinedocs/gdb    
+  [GDB Tutorial: Advanced Debugging Tips For C/C++ Programmers](https://www.techbeamers.com/how-to-use-gdb-top-debugging-tips/)   
+  [Give me 15 minutes & I'll change your view of GDB [VIDEO]](https://www.youtube.com/watch?v=PorfLSr3DDI)   
 
 
 

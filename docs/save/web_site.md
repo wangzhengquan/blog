@@ -18,9 +18,6 @@
 [Hugo](https://gohugo.io)   theme:https://themes.gohugo.io/themes/hugo-book/
 
 
-## 网络电话短信 --- virtual phone number service 
-1. [Burner](https://www.burnerapp.com/)
-2. [wephone](https://wephoneapp.co/)
 
 
 ## 有声blog
@@ -30,3 +27,6 @@ https://hackernoon.com/
 ## telegram使用指南
 https://tingtalk.me/telegram/
 https://github.com/ting-talk/blog/blob/master/source/_posts/digital-life/telegram.md
+
+## 软件下载
+破解软件下载：https://taiwebs.com/

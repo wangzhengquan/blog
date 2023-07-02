@@ -1,8 +1,9 @@
-CS  Curriculum
+# CS  Curriculum
  
-CS151  
 
-CS107e
+## 自学指南
+https://csdiy.wiki/
+https://github.com/Developer-Y/cs-video-courses
 
 
 ## Linear Algebra
@@ -77,6 +78,16 @@ https://www.youtube.com/playlist?list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI
  microsoft.github.io/AI-System   
  github.com/microsoft/AI-System
 
+- http://nocode.mba/start-ai 
+Build your first AI app!
+Create an OpenAI text generation bot.
+Build a simple app using Bubble
+Connect to OpenAI's API
+Use it live on the internet 
+
+ 
+
+
 
 ## 其他
 
@@ -94,6 +105,11 @@ https://time.geekbang.org/column/intro/100002201?code=%2BHH8ceM6XIVutB%2F1Oj496t
 
 MYSQL
 https://time.geekbang.org/column/intro/139?utm_term=zeusPRZGV&utm_source=weibo&utm_medium=dingqi&utm_campaign=0610
+
+
+CS151  
+
+CS107e
 
 
 

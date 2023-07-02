@@ -5,12 +5,27 @@
 
 注册chatGPT: https://medium.com/@dykaknsjwkmsmwm/%E5%A6%82%E4%BD%95%E6%B3%A8%E5%86%8C%E4%B8%80%E4%B8%AAchatgpt%E8%B4%A6%E5%8F%B7-99646c841fb4
 
+AIGC飞书知识库： https://ywh1bkansf.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e
+
+[GPT best practices](https://platform.openai.com/docs/guides/gpt-best-practices)
 
 waitlist:https://openai.com/waitlist/gpt-4-api
 
-付费卡：
+## 虚拟付费卡：
 https://twitter.com/Cydiar404/status/1637047977541009408
 https://twitter.com/lewangdev/status/1628802873013465088
+可以购买美区的iTunes的Gift Card付费卡进行充值
+
+## 短信接码平台
+https://5sim.net/
+
+## 网络电话短信 --- virtual phone number service 
+1. [Burner](https://www.burnerapp.com/)
+2. [wephone](https://wephoneapp.co/)
+
+
+
+
 
 
 
@@ -23,11 +38,14 @@ https://github.com/f/awesome-chatgpt-prompts
 https://github.com/PlexPt/awesome-chatgpt-prompts-zh
 
 
+
+
 ## Chat
 - [chatgpt](https://chat.openai.com)
 - claude
 - https://poe.com/ChatGPT
 - https://chat-gpt.com/chat
+免费gpt4:https://app.copilothub.ai/
 
 
 ## chatbot-ui
@@ -86,6 +104,13 @@ ebook-GPT-Translator
 🔗 github.com/jesselau76/ebook-GPT-translator 
 
 
+## automatic speech recognition (ASR) 
+
+https://github.com/ggerganov/whisper.cpp
+https://github.com/openai/whisper
+
+## text-to-video
+https://github.com/camenduru/text-to-video-synthesis-colab
  
 ## 视频字幕
 
@@ -133,6 +158,7 @@ https://github.com/ggerganov/whisper.cpp
 
 ## 文档阅读
 myGPTReader ： https://github.com/madawei2699/myGPTReader
+
 ## 用 GPT 建立个人/独立知识库
 
 文字教程：
@@ -140,3 +166,6 @@ https://uxdesign.cc/i-built-an-ai-that-answers-questions-based-on-my-user-resear
 
 视频教程：
 https://youtube.com/watch?v=vDZAZuaXf48
+
+## Large Language Model（LLM）
+[llama.cpp](https://github.com/ggerganov/llama.cpp)

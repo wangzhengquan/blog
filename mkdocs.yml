@@ -39,6 +39,9 @@ nav:
       - Inline assembly for x86: 'ProgramingLanguage/assembly/Inline assembly for x86.md'
     - C:
       - C语言要点: 'ProgramingLanguage/C/C_takeaway.md'
+    - C++:
+      - operator overload: 'ProgramingLanguage/C++/operator overload.md'
+      - friend: 'ProgramingLanguage/C++/friend.md'
   - 收藏:
     - AI Tools: "save/ai_tools.md"
     - 网络大学: "save/online_university.md"

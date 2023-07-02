@@ -4,15 +4,7 @@ git checkout -b lab2 origin/lab2
 ```
 The git checkout -b command shown above actually does two things: it first creates a local branch lab2 that is based on the origin/lab2 branch provided by the course staff, and second, it changes the contents of your lab directory to reflect the files stored on the lab2 branch. 
 
-## checkout
-### How to "merge" specific files from another branch
-```bash
-git checkout checkpoint file
-```
-or
-```bash
-git checkout --patch checkpoint file
-```
+
 
 ### 本地所有已追踪且已修改的但没有的提交的，都返回到原来的状态
 ```bash
@@ -33,11 +25,14 @@ git clean -df
 - `-q` 仅显示错误，成功删除的文件不显示
 
 
-
-## 比较两个提交点的文件
+## 放弃所有未提交的修改
 ```bash
-git diff oldcheckpoint:filename newcheckpoint:filename
+# 先查看要放弃的修改的文件
+git clean -ndf
+# 确认无误后执行下面的命令
+git checkout . && git clean -df
 ```
+
 
 ## commit的回退
 ```
@@ -47,12 +42,18 @@ git reset --hard checkpoint
 git reset --soft checkpoint
 ```
 
-## 放弃所有未提交的修改
+## 比较两个提交点的文件
 ```bash
-# 先查看要放弃的修改的文件
-git clean -ndf
-# 确认无误后执行下面的命令
-git checkout . && git clean -df
+git diff oldcheckpoint:filename newcheckpoint:filename
+```
+
+## Mmerge specific files from another branch
+```bash
+git checkout checkpoint file
+```
+or
+```bash
+git checkout --patch checkpoint file
 ```
 
 
