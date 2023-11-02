@@ -2,212 +2,252 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://wangzhengquan.github.io/blog/</loc>
-         <lastmod>2023-06-03</lastmod>
+         <lastmod>2023-11-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wangzhengquan.github.io/blog/Algorithms/Using%20two%20stacks%20to%20Evaluate%20an%20Expression/</loc>
-         <lastmod>2023-06-03</lastmod>
+         <lastmod>2023-11-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wangzhengquan.github.io/blog/Algorithms/Using_a_Stack_to_Evaluate_an_Expression/</loc>
-         <lastmod>2023-06-03</lastmod>
+         <lastmod>2023-11-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wangzhengquan.github.io/blog/GCC/GCC%20Linking/</loc>
-         <lastmod>2023-06-03</lastmod>
+         <lastmod>2023-11-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wangzhengquan.github.io/blog/GCC/GCC%20compiling%20processes/</loc>
-         <lastmod>2023-06-03</lastmod>
+         <lastmod>2023-11-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wangzhengquan.github.io/blog/GCC/Tools%20for%20Manipulating%20Object%20Files/</loc>
-         <lastmod>2023-06-03</lastmod>
+         <lastmod>2023-11-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wangzhengquan.github.io/blog/GCC/Using-Assembly-Language-with-C/</loc>
-         <lastmod>2023-06-03</lastmod>
+         <lastmod>2023-11-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wangzhengquan.github.io/blog/GDB/gdb%20demo/</loc>
-         <lastmod>2023-06-03</lastmod>
+         <lastmod>2023-11-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wangzhengquan.github.io/blog/Git/Git%20commands/</loc>
-         <lastmod>2023-06-03</lastmod>
+         <lastmod>2023-11-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wangzhengquan.github.io/blog/Jobs/jobs/</loc>
-         <lastmod>2023-06-03</lastmod>
+         <lastmod>2023-11-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wangzhengquan.github.io/blog/MacOS/Launching%20Custom%20Daemons%20Using%20launchd/</loc>
-         <lastmod>2023-06-03</lastmod>
+         <lastmod>2023-11-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wangzhengquan.github.io/blog/MacOS/MacOS%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
-         <lastmod>2023-06-03</lastmod>
+         <lastmod>2023-11-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wangzhengquan.github.io/blog/MacOS/MacOS%E5%BF%85%E5%A4%87/</loc>
-         <lastmod>2023-06-03</lastmod>
+         <lastmod>2023-11-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wangzhengquan.github.io/blog/Markdown/Markdown%20Syntax/</loc>
-         <lastmod>2023-06-03</lastmod>
+         <lastmod>2023-11-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wangzhengquan.github.io/blog/Markdown/Markdown%E6%A8%A1%E7%89%88/</loc>
-         <lastmod>2023-06-03</lastmod>
+         <lastmod>2023-11-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wangzhengquan.github.io/blog/ProgramingLanguage/C/C_takeaway/</loc>
-         <lastmod>2023-06-03</lastmod>
+         <lastmod>2023-11-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wangzhengquan.github.io/blog/ProgramingLanguage/C%2B%2B/C%2B%2B%20API/</loc>
-         <lastmod>2023-06-03</lastmod>
+         <lastmod>2023-11-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wangzhengquan.github.io/blog/ProgramingLanguage/C%2B%2B/friend/</loc>
+         <lastmod>2023-11-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wangzhengquan.github.io/blog/ProgramingLanguage/C%2B%2B/operator%20overload/</loc>
+         <lastmod>2023-11-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wangzhengquan.github.io/blog/ProgramingLanguage/assembly/Inline%20assembly%20for%20x86/</loc>
-         <lastmod>2023-06-03</lastmod>
+         <lastmod>2023-11-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wangzhengquan.github.io/blog/SSH/SSH%20command/</loc>
-         <lastmod>2023-06-03</lastmod>
+         <lastmod>2023-11-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wangzhengquan.github.io/blog/SSH/SSH%20config/</loc>
-         <lastmod>2023-06-03</lastmod>
+         <lastmod>2023-11-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wangzhengquan.github.io/blog/SSH/SSH%20install/</loc>
-         <lastmod>2023-06-03</lastmod>
+         <lastmod>2023-11-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wangzhengquan.github.io/blog/SSH/SSH%20login%20without%20password/</loc>
-         <lastmod>2023-06-03</lastmod>
+         <lastmod>2023-11-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wangzhengquan.github.io/blog/Shell/Shell%20Command/</loc>
-         <lastmod>2023-06-03</lastmod>
+         <lastmod>2023-11-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wangzhengquan.github.io/blog/Shell/Shell%20Script/</loc>
-         <lastmod>2023-06-03</lastmod>
+         <lastmod>2023-11-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wangzhengquan.github.io/blog/Unbuntu/fix-the-no-wi-fi-adapter-found-error-on-ubuntu/</loc>
-         <lastmod>2023-06-03</lastmod>
+         <lastmod>2023-11-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wangzhengquan.github.io/blog/Vagrant/Vagrant%20tutorial/</loc>
-         <lastmod>2023-06-03</lastmod>
+         <lastmod>2023-11-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wangzhengquan.github.io/blog/Vim/vim%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
-         <lastmod>2023-06-03</lastmod>
+         <lastmod>2023-11-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wangzhengquan.github.io/blog/database/sql/</loc>
-         <lastmod>2023-06-03</lastmod>
+         <lastmod>2023-11-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wangzhengquan.github.io/blog/docker/docker/</loc>
+         <lastmod>2023-11-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wangzhengquan.github.io/blog/editor/Sublime/</loc>
-         <lastmod>2023-06-03</lastmod>
+         <lastmod>2023-11-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wangzhengquan.github.io/blog/editor/VSCode/</loc>
-         <lastmod>2023-06-03</lastmod>
+         <lastmod>2023-11-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://wangzhengquan.github.io/blog/editor/neteditor/</loc>
-         <lastmod>2023-06-03</lastmod>
+         <loc>https://wangzhengquan.github.io/blog/editor/online%20editor/</loc>
+         <lastmod>2023-11-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wangzhengquan.github.io/blog/qemu/qemu/</loc>
-         <lastmod>2023-06-03</lastmod>
+         <lastmod>2023-11-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wangzhengquan.github.io/blog/save/ai_tools/</loc>
-         <lastmod>2023-06-03</lastmod>
+         <lastmod>2023-11-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wangzhengquan.github.io/blog/save/blog/</loc>
-         <lastmod>2023-06-03</lastmod>
+         <lastmod>2023-11-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wangzhengquan.github.io/blog/save/books/</loc>
+         <lastmod>2023-11-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wangzhengquan.github.io/blog/save/browser_plugin/</loc>
-         <lastmod>2023-06-03</lastmod>
+         <lastmod>2023-11-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wangzhengquan.github.io/blog/save/course/</loc>
-         <lastmod>2023-06-03</lastmod>
+         <lastmod>2023-11-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wangzhengquan.github.io/blog/save/english_rank/</loc>
-         <lastmod>2023-06-03</lastmod>
+         <lastmod>2023-11-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wangzhengquan.github.io/blog/save/it_tools/</loc>
-         <lastmod>2023-06-03</lastmod>
+         <lastmod>2023-11-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wangzhengquan.github.io/blog/save/online_university/</loc>
-         <lastmod>2023-06-03</lastmod>
+         <lastmod>2023-11-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wangzhengquan.github.io/blog/save/prompts/</loc>
+         <lastmod>2023-11-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wangzhengquan.github.io/blog/save/study-books/</loc>
+         <lastmod>2023-11-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wangzhengquan.github.io/blog/save/tools/</loc>
-         <lastmod>2023-06-03</lastmod>
+         <lastmod>2023-11-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wangzhengquan.github.io/blog/save/web_site/</loc>
-         <lastmod>2023-06-03</lastmod>
+         <lastmod>2023-11-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wangzhengquan.github.io/blog/save/%E7%94%B5%E5%BD%B1/</loc>
+         <lastmod>2023-11-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wangzhengquan.github.io/blog/web/web/</loc>
+         <lastmod>2023-11-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wangzhengquan.github.io/blog/wireshark/wireshark/</loc>
-         <lastmod>2023-06-03</lastmod>
+         <lastmod>2023-11-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
