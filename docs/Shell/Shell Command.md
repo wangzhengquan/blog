@@ -450,16 +450,15 @@ or
 sudo -i
 ```
 
-
-
 ## Terminal
 ### CLI Shortcuts
-* `[ctrl]+u` / `[ctrl]+k` 删除行内光标所在位置之前/后的内容
-* `<ctrl> + a` `<ctrl> + e` will move the cursor to the beginning / end of the current line
-* `alt-f` / `alt-b`  可以以单词为单位向前/后移动光标
-* `ctrl-w` 删除你键入的最后一个单词
-* `ctrl-l` 清屏
-* `<ctrl> + r` will let you search through your recently used commands
+- `CTRL+u` / `CTRL+k` 删除行内光标所在位置之前/后的内容
+- `CTRL + a` `CTRL + e` will move the cursor to the beginning / end of the current line
+- `alt-f` / `alt-b`  可以以单词为单位向前/后移动光标
+- `CTRL-w` 删除你键入的最后一个单词
+- `CTRL-l` 清屏
+- `CTRL + r` will let you search through your recently used commands
+- `CTRL+d` delete backward
 
 你喜欢的话，可以执行 `set -o vi` 来使用 vi 风格的快捷键，而执行 `set -o emacs` 可以把它改回来。
 

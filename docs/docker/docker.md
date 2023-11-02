@@ -38,6 +38,7 @@ RUN apt-get -y update && \
       doxygen \
       git \
       g++-12 \
+      gdb \
       pkg-config \
       zlib1g-dev \
       vim
@@ -51,7 +52,7 @@ docker build -t wangzhengquan/dev-in-ubuntu:1.0 .
 ```
 
 ## Push your image
-Now that you've created and tested your image, you can push it to [Docker Cloud](https://hub.docker.com/).
+Now that you've created and tested your image, you can push it to [Docker Cloud][4].
 First you have to login to your Docker Cloud account, to do that:
 ```bash
 docker login
@@ -76,6 +77,12 @@ rm -rf ~/.docker/config.json
 
 
 ## References
+- [Docker for beginners][1] 
+- [Change Docker Desktop settings on Mac][2]  
+- [Docker commandline][3]  
+- [Docker Cloud][4]  
 
-- [Docker for beginners](https://github.com/docker/labs/blob/master/beginner/readme.md)  
-- [Change Docker Desktop settings on Mac](https://docs.docker.com/desktop/settings/mac/)
+[1]: https://github.com/docker/labs/blob/master/beginner/readme.md
+[2]: https://docs.docker.com/desktop/settings/mac/
+[3]: https://docs.docker.com/engine/reference/commandline/run/
+[4]: https://hub.docker.com/

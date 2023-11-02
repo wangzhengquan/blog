@@ -24,6 +24,8 @@ const int * const p;
 int const * const p;
 ```
 
+[The Clockwise/Spiral Rule](https://c-faq.com/decl/spiral.anderson.html)
+
 ## keyword volatile
 
 Declare global variables with volatile. Consider a handler and main routine that share a global variable g. The handler updates g, and main periodically reads g. To an optimizing compiler, it would appear that the value of g never changes in main, and thus it would be safe to use a copy of g that is cached in a register to satisfy every reference to g. In this case, the main function would never see the updated values from the handler.
@@ -33,4 +35,6 @@ You can tell the compiler not to cache a variable by declaring it with the volat
 volatile int g;
 ```
 The volatile qualifier forces the compiler to read the value of g from memory each time it is referenced in the code. In general, as with any shared data structure, each access to a global variable should be protected by temporarily blocking signals.
+
+
 

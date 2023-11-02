@@ -26,6 +26,11 @@ https://inst.eecs.berkeley.edu/~cs61c/fa20/
 CS 152
 https://inst.eecs.berkeley.edu/~cs152/sp22/
 
+
+mit6.033
+https://web.mit.edu/6.033/2021/wwwdocs/
+vedio : https://www.bilibili.com/video/BV12T4y1R78D?p=3&vd_source=f7c3035649d82d9d7358c49700809de3
+
 ## 操作系统
  MIT6.828
 https://pdos.csail.mit.edu/6.828/2018/schedule.html

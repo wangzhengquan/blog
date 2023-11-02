@@ -10,6 +10,9 @@ To add the line above or below to the selection, use:
 * Windows/Linux: Ctrl+Alt+⬆ and Ctrl+Alt+⬇
 * Mac: ⌃+⇧+⬆ and ⌃+⇧+⬇
 
+## Navigate between files and edit locations
+`⌃-` and `⌃⇧-` : navigate between files and edit locations.
+
 ### Splitting the Selection into Lines
 
 Select a block of lines, and then split it into many selections, one per line, using:

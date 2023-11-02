@@ -31,6 +31,7 @@ https://ispc.github.io/downloads.html
 - Mac上的Quiver做的真心不错，不止支持Markdown，还支持HTML、公式、流程图。（收费）
 - GitHub CodeEditApp/CodeEdit：轻量社区友好的免费 macOS 原生代码编辑器： https://github.com/CodeEditApp/CodeEdit
 - Runestone是个开源的iOS的代码编辑器：https://github.com/simonbs/Runestone
+- Xournal++ : https://xournalpp.github.io/
 
 
 ## Jira
