@@ -22,3 +22,8 @@ netstat -anvp tcp | grep 8000 | awk '{print $9}'
 ```
 echo hello | pbcopy
 ```
+
+## Empty Terminal on Mac using keyboard shortcut
+```
+⌘ + K 
+```

@@ -9,7 +9,7 @@
 
 ## Const Pointer
 
-只需要记住， 只有`* const` 才表示constant pointer 。  
+只需要记住， 只有`* const` 才表示constant pointer  
 
 ```C++
 // constant pointer to a non-constant int

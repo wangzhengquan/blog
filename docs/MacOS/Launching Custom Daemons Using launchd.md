@@ -70,7 +70,7 @@ The interface to launchd is a tool called launchctl which allows for loading and
 
 The above file **mkdocs.blogs.plist** needs to be saved in the **~/Library/LaunchAgents** directory. As you can see the xml dictates that the "[blogserver.sh](http://blogserver.sh)" file should be executed at load, note we no longer need a ".command" file extension. We will now use launchctl to load our plist file.
 
-```
+```bash
  launchctl load ~/Library/LaunchAgents/mkdocs.blogs.plist
 ```
 

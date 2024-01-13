@@ -1,10 +1,12 @@
 ## New branch
-```
-git checkout -b lab2 origin/lab2
-```
-The git checkout -b command shown above actually does two things: it first creates a local branch lab2 that is based on the origin/lab2 branch provided by the course staff, and second, it changes the contents of your lab directory to reflect the files stored on the lab2 branch. 
+```bash
+## 
+git checkout -b <new-branch> <start-point>
+## same as
+git switch -c <new-branch> <start-point>
 
-
+```
+ 
 
 ### 本地所有已追踪且已修改的但没有的提交的，都返回到原来的状态
 ```bash
@@ -70,6 +72,20 @@ git log --graph --decorate --oneline --simplify-by-decoration --all
 ## 查看谁修改的代码
 ```
 git blame controllers/admin/contract.js 
+```
+
+## Tag
+
+```bash
+# Creating tag
+git tag -a v1.1 9fceb02 -m "hight performance，hight rpc "
+
+git push origin v1.1
+git push origin --tags
+
+# Delete tag
+git tag -d <tagname>
+ git push origin --delete <tagname>
 ```
 
 ## References
