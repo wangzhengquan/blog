@@ -37,6 +37,9 @@ https://5sim.net/
 https://github.com/f/awesome-chatgpt-prompts
 https://github.com/PlexPt/awesome-chatgpt-prompts-zh
 
+GPTs Prompts: github.com/linexjlin/GPTs 
+
+
 
 
 
@@ -45,7 +48,9 @@ https://github.com/PlexPt/awesome-chatgpt-prompts-zh
 - claude
 - https://poe.com/ChatGPT
 - https://chat-gpt.com/chat
-免费gpt4:https://app.copilothub.ai/
+免费gpt4:
+https://app.copilothub.ai/
+https://coze.com
 
 
 ## chatbot-ui

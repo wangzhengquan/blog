@@ -24,3 +24,8 @@ https://app.diagrams.net/
 
 ## google
 https://drive.google.com/
+
+## 下载
+gopeed：
+https://github.com/GopeedLab/gopeed
+https://docs.gopeed.com/zh/install.html
