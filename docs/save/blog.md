@@ -8,3 +8,12 @@ Quick Reference:
 https://github.com/jaywcjlove/reference?tab=readme-ov-file
 https://cheatsheets.zip/ 
 https://wangchujiang.com/reference/
+
+
+## 宝藏博主
+https://github.com/GitHubDaily/GitHubDaily
+https://weibo.com/u/5722964389
+
+
+## 前端
+https://cn.innei.ren/posts/tech/why-react-server-component-2

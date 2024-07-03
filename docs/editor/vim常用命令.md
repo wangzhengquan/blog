@@ -193,11 +193,11 @@ All other text objects can also be used to operate on the text inside the tag
 
 例如：
 
+* `:%s/<ten>/10/g` 将所有出现的字ten替换为字符串10
 * ` :s/p1/p2/g ` 将当前行中所有p1均用p2替代
 *  ` :1,.s/p1/p2/g ` 将当前行之前的所有行的字符串p1替换为字符串p2
 * ` :1,$s/p1/p2/g` 将所有出现的字符串p1替换为字符串p2
 * ` :g/chaper/s/ten/10/`将第一次出现的包含字符串chaper的所有行中的字符串ten替换为字符串10
-* `:%s/<ten>/10/g` 将所有出现的字ten替换为字符串10
 * `:.,.+10s/every/each/g`将出现的从当前行到后续10行内的每个字符串every替换为字符串each
 * ` :s/<short\>/"&"/` 将当前行中的字short替换为"short"(即将当前行中的字short用引号括起来)
 * `:n1,n2s/p1/p2/g` 将第n1至n2行中所有p1均用p2替代

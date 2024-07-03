@@ -15,14 +15,18 @@
  
 
 ## 个人网站建设
-[Hugo](https://gohugo.io)   theme:https://themes.gohugo.io/themes/hugo-book/
+[Hugo](https://gohugo.io)   theme: https://themes.gohugo.io/themes/hugo-book/
 
 
-
-
-## 有声blog
-
+## podcasts
 https://hackernoon.com/
+https://open.spotify.com/
+https://podcasts.apple.com/ca/podcast/the-history-of-english-podcast
+
+
+## Documentaries
+https://ihavenotv.com/
+
 
 ## telegram使用指南
 https://tingtalk.me/telegram/
@@ -30,3 +34,12 @@ https://github.com/ting-talk/blog/blob/master/source/_posts/digital-life/telegra
 
 ## 软件下载
 破解软件下载：https://taiwebs.com/
+
+
+
+
+
+web.tmeplate.com
+itoy.com
+webskeleton.com
+webos.com

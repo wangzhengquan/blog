@@ -110,7 +110,7 @@ gcc -static -o prog main.c -L. -lvector
 
 下面删除'libvector.a'， 然后测试一下动态链接库的构建过程。
 
-[编译可共享的libvector.so](http://xn--libvector-pm7n77vz3hlv5jrczaz53b.so) 库文件
+编译可共享的libvector.so 库文件
 
 ```bash
 gcc -shared -fpic -o libvector.so addvec.c multvec.c
@@ -137,7 +137,7 @@ $ ldd prog2
       /lib64/ld-linux-x86-64.so.2 (0x00007f472ced9000)
 ```
 
-运行
+运行，成功。
 
 ```bash
 $ ./prog2
@@ -156,9 +156,7 @@ gcc -o prog3 main.c -L. -lvector
 gcc -o prog2 main.c libvector.so
 ```
 
-会发生什么呢？
-
-运行，发现报错了
+可以编译成功，但是，运行，发现报错了。
 
 ```bash
 $ ./prog3
@@ -175,7 +173,7 @@ $ ldd prog3
       /lib64/ld-linux-x86-64.so.2 (0x00007f15d378c000)
 ```
 
-发现“[libvector.so](http://libvector.so)”那里显示“not found”，[意思是找不到libvector.so](http://xn--libvector-kc6n777ai75b4tc30g8uq.so)。为什么会这样呢，原来通过这种方式编译生产的目标执行文件没有路径信息，‘-L.’仅仅是在编译的时候用到的，在加载运行的时候链接器先要到系统设定的动态链接库查找目录中查找引用到的so文件以进行链接处理（relocation），而我们的libvector.so文件所在目录不在系统设定的动态链接库查找目录中，所以找不到。静态链接库为什么不会出现这个问题呢， 因为引用静态链接库进行编译时，生成的是一个完全链接的可执行文件，该文件是可以直接加载（拷贝）到内存运行的；而引用动态链接库进行编译生成的是一个部分链接的可执行文件，加载器在加载这个可执行文件的时候，要先交给链接器进行链接处理（relocation）,链接处理完成后再开始运行这个程序。
+发现“[libvector.so](http://libvector.so)”那里显示“not found”，[意思是找不到libvector.so](http://xn--libvector-kc6n777ai75b4tc30g8uq.so)。为什么会这样呢，原来通过这种方式编译生成的目标执行文件没有路径信息，‘-L.’仅仅是在编译的时候用到的，在加载运行的时候链接器首先要到系统设定的动态链接库查找目录中查找引用到的so文件以进行链接处理（relocation），而我们的libvector.so文件所在目录不在系统设定的动态链接库查找目录中，所以找不到。静态链接库为什么不会出现这个问题呢， 因为引用静态链接库进行编译时，生成的是一个完全链接的可执行文件，该文件是可以直接加载（拷贝）到内存运行的；而引用动态链接库进行编译生成的是一个部分链接的可执行文件，加载器在加载这个可执行文件的时候，要先交给链接器进行链接处理（relocation）,链接处理完成后再开始运行这个程序。
 
 如何解决呢，因为动态链接库查找目录是在“/etc/ld.so.conf”文件中设定的，可以把“./libvector.so”所在目录的路径加入到系统的“/etc/ld.so.conf”文件中，加入之后还需要执行`sudo ldconfig` 命令让新路径生效。
 
@@ -185,7 +183,7 @@ $ ldd prog3
 export LD_LIBRARY_PATH=/home/vagrant/test
 ```
 
-完成动态链接库路径设置后，再执行ldd命令
+完成动态链接库路径设置后，再执行ldd命令，这时候可以发现libvector.so已经可以找到了。
 
 ```bash
 $ ldd ./prog3
@@ -195,13 +193,12 @@ $ ldd ./prog3
       /lib64/ld-linux-x86-64.so.2 (0x00007fe25d107000)
 ```
 
-这时候可以发现libvector.so已经可以找到了
 
-再一次运行
+再一次运行，成功。
 
 ```bash
 $ ./prog3
   z = [4 6]
 ```
 
-\
+

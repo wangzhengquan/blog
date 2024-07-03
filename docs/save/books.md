@@ -1,5 +1,5 @@
 读书
-
+可汗学院创始人 Salman Khan 的新书：《Brave New Words——How AI Will Revolutionize Education (and Why That’s a Good Thing)》
 After Ten Years: Dietrich Bonhoeffer and Our Times
 莎士比亚全集
 原生家庭

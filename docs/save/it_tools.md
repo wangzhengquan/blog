@@ -36,3 +36,36 @@ https://ispc.github.io/downloads.html
 
 ## Jira
 [plane](https://github.com/makeplane/plane) :Jira 的开源版平替
+
+## Database
+数据库管理工具：data grip https://www.jetbrains.com/datagrip/
+
+
+
+## 视频下载工具
+cobalt： 支持 B站、YouTube、Instagram、TikTok 和 Twitter 视频下载
+GitHub：github.com/imputnet/cobalt
+在线体验：cobalt.tools 
+
+## html视频播放
+https://github.com/sampotts/plyr/tree/master
+https://github.com/bytedance/xgplayer?tab=readme-ov-file
+
+
+
+## homeserver and NAS(network attached storage )
+CasaOS:
+https://github.com/IceWhaleTech/CasaOS
+
+Runtipi：
+昨天给家里的 homeserver 装了这个 Runtipi：
+https://github.com/runtipi/runtipi
+安装各种应用方便很多，基于Docker，有个 App Store 可以直接一键安装，很快速，常见应用都有，界面图标都很好看，技术栈也很新，用起来挺舒服的。
+如果大家家里有树莓派之类的可以安装下，体验很棒.
+
+https://www.openmediavault.org/
+
+https://www.appinn.com/ds-cloud/
+
+## cloudflare
+基于Cloudflare的开源工具: https://github.com/zhuima/awesome-cloudflare

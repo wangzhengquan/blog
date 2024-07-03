@@ -21,11 +21,11 @@ nav:
     - MacOS必备: 'MacOS/MacOS必备.md'
   - Unbuntu:
     - Fix “No Wi-Fi Adapter Found” Error on Ubuntu: 'Unbuntu/fix-the-no-wi-fi-adapter-found-error-on-ubuntu.md'
-  - Vim:
-    - Vim常用命令: 'Vim/vim常用命令.md'
+    - Ubuntu必备: 'Unbuntu/Ubuntu必备.md'
   - 编辑器:
-    - Sublime: 'editor/Sublime.md'
-    - VSCode: 'editor/VSCode.md'
+    - Sublime: 'Editor/Sublime.md'
+    - VSCode: 'Editor/VSCode.md'
+    - Vim常用命令: 'Editor/vim常用命令.md'
   - GCC:
     - GCC compiling processes: 'GCC/GCC compiling processes.md'
     - GCC Linking: 'GCC/GCC Linking.md'

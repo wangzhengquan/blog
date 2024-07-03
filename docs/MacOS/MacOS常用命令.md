@@ -27,3 +27,11 @@ echo hello | pbcopy
 ```
 ⌘ + K 
 ```
+
+## 静音
+"Fn + F10"
+
+## 显示隐藏文件
+```
+cmd + shift + .
+```

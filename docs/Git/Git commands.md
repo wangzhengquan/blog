@@ -89,6 +89,8 @@ git tag -d <tagname>
 ```
 
 ## References
+> gitignore: https://github.com/github/gitignore/tree/main
+>https://www.atlassian.com/git/tutorials/undoing-changes/git-reset
 >https://www.atlassian.com/git/tutorials/
 >https://git-scm.com/book/en/v2
 >https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet

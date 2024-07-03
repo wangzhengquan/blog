@@ -17,3 +17,9 @@ scp by default only works with files. To copy folders, you need to tell scp to â
 ```bash
 scp -rp ~/Downloads wzq@192.168.1.5:~/some_folder/
 ```
+
+## local port forwarding (also known as SSH tunneling) 
+```bash
+ssh -L 5000:localhost:5000 <ssh-user>@<CLOUD_INSTANCE_IP_ADDRESS>
+```
+This command is used to create a local port forwarding (also known as SSH tunneling) between your local machine and a remote server (cloud instance) using the SSH protocol.

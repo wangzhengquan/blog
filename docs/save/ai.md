@@ -11,22 +11,37 @@ AIGC飞书知识库： https://ywh1bkansf.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmO
 
 waitlist:https://openai.com/waitlist/gpt-4-api
 
+## 工具收集
+https://openai.xnewstar.com/
+
+## vps
+Hostdare: https://www.hostdare.com/
+
 ## 虚拟付费卡：
+指南： https://sites.google.com/view/chatgptcn/ChatGPT-Plus-bind-credit-cards
+https://x.com/zuozizhen/status/1642034351163719680
 https://twitter.com/Cydiar404/status/1637047977541009408
 https://twitter.com/lewangdev/status/1628802873013465088
+nobepay
+Depay： https://depay.com/
+PayPal 
+stripe： https://stripe.com/zh-us
 可以购买美区的iTunes的Gift Card付费卡进行充值
+https://card.onekey.so/home
 
+## 虚拟地址生成
+www.meiguodizhi.com/
+www.haoweichi.com/
+
+
+## 手机卡
+PayGo： https://www.ultramobile.com/paygo/
 ## 短信接码平台
 https://5sim.net/
 
 ## 网络电话短信 --- virtual phone number service 
 1. [Burner](https://www.burnerapp.com/)
 2. [wephone](https://wephoneapp.co/)
-
-
-
-
-
 
 
 ## prompts
@@ -40,25 +55,40 @@ https://github.com/PlexPt/awesome-chatgpt-prompts-zh
 GPTs Prompts: github.com/linexjlin/GPTs 
 
 
-
-
-
 ## Chat
 - [chatgpt](https://chat.openai.com)
-- claude
+- claude: https://claude.ai/chat/
 - https://poe.com/ChatGPT
-- https://chat-gpt.com/chat
+- https://chatgpt.com/chat
+- perplexity: https://www.perplexity.ai/
 免费gpt4:
 https://app.copilothub.ai/
+https://app.copilothub.ai/chat?id=4364
 https://coze.com
+https://www.coze.com/store/bot/7348297603085352962?panel=1&bid=6ck3vs0so4g05
+https://www.glbgpt.com/chat
 
 
-## chatbot-ui
+
+
+## chatbot ui
+
+https://github.com/open-webui/open-webui
+
+https://github.com/ChatGPTNextWeb/ChatGPT-Next-Web
+
 https://github.com/mckaywrigley/chatbot-ui
 
 https://github.com/Bin-Huang/chatbox
 
 https://github.com/josStorer/chatGPTBox
+
+## VoceChat
+https://x.com/wsygc/status/1793786792866701418
+https://www.bilibili.com/video/BV1r8411g7yt/?share_source=copy_web&vd_source=b5c6298de30df695b6d8fb64bfc1e9bc
+官网：https://voce.chat
+官方文档：https://doc.voce.chat
+git地址：https://github.com/Privoce
 
 ## API
 https://platform.openai.com
@@ -67,8 +97,11 @@ https://platform.openai.com
 - Copilot X
 https://twitter.com/AlphaSignalAI/status/1638571132474511361
 https://github.blog/2023-03-22-github-copilot-x-the-ai-powered-developer-experience/
-- copilot  
+- github copilot 
+https://docs.github.com/en/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode#prerequisites-2 
 how to use: https://www.builder.io/blog/vscode-tips   https://twitter.com/Steve8708/status/1635758301899264000
+
+
 - bloop https://bloop.ai/  
 - cursor https://www.cursor.so/ 
 -  AI Code Translator
@@ -96,10 +129,12 @@ https://twitter.com/zachlloydtweets/status/1636385520082386944
 https://www.warp.dev/
 
 ## 英语学习
-英语学习教练」AI，得到的反馈是比私教老师讲得要好 ：https://app.copilothub.ai/chat?id=4364
 
-## 翻译
-https://github.com/yetone/openai-translator 
+DashPlayer 的目标就是方便你观看英文视频： 
+https://github.com/solidSpoon/DashPlayer
+https://github.com/Hiram-Wong/ZyPlayer
+
+
 
 ## 电子书翻译
 ebook-GPT-Translator
@@ -114,8 +149,16 @@ ebook-GPT-Translator
 https://github.com/ggerganov/whisper.cpp
 https://github.com/openai/whisper
 
-## text-to-video
+## text-to-video 
 https://github.com/camenduru/text-to-video-synthesis-colab
+
+## text-to-speech (TTS)
+chattts
+https://github.com/2noise/ChatTTS
+https://chattts.com/
+https://github.com/jianchang512/ChatTTS-ui
+
+https://github.com/Sh4yy/personal-ai?continueFlag=f7f47316d94d1dfc8ef7128667de0f1d
  
 ## 视频字幕
 
@@ -142,6 +185,8 @@ AutoCut 对你的视频自动生成字幕。然后你选择需要保留的句子
 
 6. 发现一个音频转字幕的简单方法，就是使用飞书的Minutes，把音频上传上去后，自动能识别字幕，并且还能识别Speaker. https://larksuite.com/en_us/product/minutes
 
+7. https://github.com/HaujetZhao/CapsWriter-Offline
+
 
 ## AI语音对话
 1. 之前Whisper.cpp和llama.cpp的作者把llama，whisper，TTS整合在了一起，实现了LLaMA的本地语音聊天，相当于你本机有个语音版的ChatGPT，你可以用语音和它对话交流，效果很酷。
@@ -155,8 +200,22 @@ https://github.com/ggerganov/whisper.cpp
 [TextSniper](https://textsniper.app/?continueFlag=9bd5d9031215cfb669b8ae72708f7318)
 
 
-## 绘画
+## 图片处理
 1. Midjourney
+2. runway： https://app.runwayml.com/
+3. 抠图： https://pixian.ai/
+         https://app.mlblocks.com/mlflow
+         http://remove.bg
+         http://photoroom.com
+         http://zmo.ai/imagen
+         http://watermarkremover.io
+         http://erase.bg
+         http://magicstudio.com
+
+
+## 音乐
+https://www.suno.ai/
+
 
 ## 医疗问诊
 [ChatDoctor](https://github.com/Kent0n-Li/ChatDoctor)
@@ -174,3 +233,33 @@ https://youtube.com/watch?v=vDZAZuaXf48
 
 ## Large Language Model（LLM）
 [llama.cpp](https://github.com/ggerganov/llama.cpp)
+
+
+
+## generate web page
+OpenUI： https://github.com/wandb/openui
+
+
+## 类似Perplexity
+An AI-powered answer engine with a generative UI:
+Yoshiki Miura 昨晚开源了一个类似 Perplexity 的 AI 搜索工具，开源软件能够做到这种体验和美观度的确实很少。功能非常全面，而且支持 Vercel 一键部署，可以整一个玩玩。
+而且还有生成式UI，感觉一些独立开发者可以参考一下他的前端实现，这样起码做出来的页面不会太难用。比如无样式组件库Radix UI以及Tailwind CSS。
+https://github.com/miurla/morphic 
+
+## ElevenLabs 推出 Audio Native 自动将你的内容转换为播客
+https://xiaohu.ai/p/8122
+https://elevenlabs.io/docs/audio-native/audio-native-react
+https://elevenlabs.io/docs/audio-native/ghost
+https://elevenlabs.io/docs/audio-native/squarespace
+https://elevenlabs.io/blog/audio-native/
+
+
+## screenshot to code
+https://github.com/abi/screenshot-to-code
+https://screenshottocode.com/
+
+workflow
+https://github.com/langflow-ai/langflow?utm_source=x+&utm_medium=santiago&utm_campaign=langflow
+
+
+

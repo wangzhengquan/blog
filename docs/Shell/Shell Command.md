@@ -254,9 +254,9 @@ cd wzq~
 替换或删除跨越多个目录的多个文件里的指定文本
 ```bash
 # 替换当前目录下除.git和build目录外的所有文件里的‘window’为‘linux’
-grep -rl 'windows' ./ --exclude-dir=".git"  --exclude-dir="build"| xargs sed -i 's/windows/linux/g'
+grep -rl 'windows' ./ --exclude-dir=".git"  --exclude-dir="node_modules"| xargs sed -i 's/windows/linux/g'
 # Mac下sed命令的"-i"选项后面需要加字符串表示备份文件的后缀
-grep -rl 'windows' ./ --exclude-dir=".git"  --exclude-dir="build" | xargs sed -i ''  's/windows/linux/g'
+grep -rl 'windows' ./ --exclude-dir=".git"  --exclude-dir="node_modules" | xargs sed -i ''  's/windows/linux/g'
 
 #删除出现‘windows’的行
 grep -rl 'windows' ./ | xargs sed -i ''   '/windows/d'
