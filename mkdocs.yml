@@ -20,7 +20,7 @@ nav:
     - MacOS常用命令: 'MacOS/MacOS常用命令.md'
     - MacOS必备: 'MacOS/MacOS必备.md'
   - Unbuntu:
-    - Fix “No Wi-Fi Adapter Found” Error on Ubuntu: 'Unbuntu/fix-the-no-wi-fi-adapter-found-error-on-ubuntu.md'
+    - Fix “No WiFi Adapter Found” Error on Ubuntu: 'Unbuntu/fix-the-no-wifi-adapter-found-error-on-ubuntu.md'
     - Ubuntu必备: 'Unbuntu/Ubuntu必备.md'
   - 编辑器:
     - Sublime: 'Editor/Sublime.md'
