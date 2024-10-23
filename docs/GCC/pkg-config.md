@@ -1,0 +1,1 @@
+https://people.freedesktop.org/~dbn/pkg-config-guide.html

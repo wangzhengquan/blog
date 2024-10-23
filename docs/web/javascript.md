@@ -33,17 +33,17 @@ useEffect(() => {
 ## scroll
 - scrollHeight:
 - element.scrollTop / window.scrollY: 
-```
-element.scrollHeight = element.clientHeight + element.scrollTop
+```javascript
+element.scrollHeight == element.clientHeight + element.scrollTop
 ```
 scrollTop is a non-rounded number, while scrollHeight and clientHeight are rounded — so the only way to determine if the scroll area is scrolled to the bottom is by seeing if the scroll amount is close enough to some threshold (in this example 1):
-```
-Math.abs(element.scrollHeight - element.clientHeight - element.scrollTop) <= 1;
+```javascript
+(element.scrollHeight - element.clientHeight - element.scrollTop) <= 1;
 
 ```
 - scrollBy(): https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollBy
 The `scrollBy()` method scrolls the document in the window by the given amount.
-```
+```javascript
 element.scrollBy({
   top: 100,
   left: 100,
@@ -53,7 +53,7 @@ element.scrollBy({
 
 - scrollTo():  https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollTo
 `scrollTo()` scrolls to a particular set of coordinates in the document.
-```
+```javascript
 element.scrollTo({
   top: 100,
   left: 100,
@@ -64,7 +64,7 @@ element.scrollTo({
 
 - scrollIntoView: https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView
 The Element interface's scrollIntoView() method scrolls the element's ancestor containers such that the element on which scrollIntoView() is called is visible to the user.
-```
+```javascript
 const imgNode = listNode.querySelectorAll('li > img')[index];
 imgNode.scrollIntoView({
   behavior: 'smooth',
@@ -91,6 +91,30 @@ const observer = new ResizeObserver((observedItems) => {
 });
 
 observer.observe(parentBox);
+```
+
+## MutationObserver
+```javascript
+const callback = function(mutationsList, observer) {
+  for (const mutation of mutationsList) {
+    if (mutation.type === 'childList') {
+      console.log('A child node has been added or removed.');
+    } else if (mutation.type === 'characterData') {
+      console.log('The text content of a node has changed.');
+    } else if (mutation.type === 'attributes') {
+      console.log('The attributes of the node have changed.');
+    }
+  }
+};
+const observer = new MutationObserver(callback);
+
+// Start observing the target element for changes
+observer.observe(this.container, { 
+  childList: true,  // Monitor child elements
+  subtree: true,    // Monitor entire subtree
+  characterData: true, // Monitor text content
+  attributes: true,  // Monitor attribute changes
+});
 ```
 
 ## modify
@@ -145,3 +169,16 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/Exp
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols
 ## Object_initializer
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer
+
+## 特数语法
+```javascript
+// invoke onComplete if it exit  
+onComplete?.(); 
+```
+
+## books
+ou Don't Know JS : https://github.com/getify/You-Dont-Know-JS/tree/2nd-ed
+
+
+## reference
+[v8](https://v8.dev/blog)

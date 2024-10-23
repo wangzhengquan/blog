@@ -1,7 +1,4 @@
 
-
-
-
 ## 50projects50days
 《50天50个项目》是一个帮助开发者通过实践学习 Web 开发的课程，包含了50个使用 HTML、CSS和JavaScript 制作的小型 Web 项目，拥有超过34.1k Star
 
@@ -9,6 +6,12 @@ https://github.com/bradtraversy/50projects50days
 
 ## workflow
 https://app.mlblocks.com/mlflow?graphid=dTRspzXnPUCmai6UXAQ6
+
+
+## 为 Home Assistant 设计的 React 组件库，开箱即用。拥有大量现成的组件和卡片，可以轻松生成炫酷的 Home Assistant 仪表板
+https://shannonhochkins.github.io/ha-component-kit/?path=/story/introduction-demo--default
+
+https://github.com/shannonhochkins/ha-component-kit
 
 ## UI
 研究了 Runtipi 的 App Store列表

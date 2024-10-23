@@ -8,3 +8,7 @@ https://cplusplus.com/reference
 - [C++ Core Guidelines](http://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines)
 
 - [a short tutorial](https://www.thegeekstuff.com/2016/02/c-plus-plus-11/)
+
+
+## modern c++ bootcamp that helps students understand modern c++
+https://github.com/cmu-db/15445-bootcamp

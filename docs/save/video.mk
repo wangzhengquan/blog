@@ -22,3 +22,7 @@ By following these steps and continuously practicing and learning, you can devel
 https://ffmpeg.org/ffmpeg.html
 https://ffmpeg.org/documentation.html
 https://wklchris.github.io/blog/FFmpeg/
+
+
+https://github.com/mifi/lossless-cut
+

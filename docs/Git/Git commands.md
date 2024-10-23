@@ -62,12 +62,28 @@ git checkout --patch checkpoint file
 ## git log
 ```bash
 git log --graph --decorate --oneline --simplify-by-decoration --all
+
+git log --oneline --graph --decorate --all
 ```
 说明：  
 - `--decorate` 标记会让git log显示每个commit的引用(如:分支、tag等)
 - `--oneline` 一行显示
 - `--simplify-by-decoration` 只显示被branch或tag引用的commit
 - `--all`表示显示所有的branch，这里也可以选择，比如我指向显示分支ABC的关系，则将--all替换为branchA branchB branchC
+
+
+My two cents: I have two aliases I normally throw in my ~/.gitconfig file:
+```bash
+[alias]
+lg1 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)' --all
+lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(auto)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)'
+lg = lg1
+```
+
+then, you can
+```bash
+git lg
+```
 
 ## 查看谁修改的代码
 ```

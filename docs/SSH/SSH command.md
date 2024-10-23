@@ -18,8 +18,20 @@ scp by default only works with files. To copy folders, you need to tell scp to �
 scp -rp ~/Downloads wzq@192.168.1.5:~/some_folder/
 ```
 
-## local port forwarding (also known as SSH tunneling) 
-```bash
-ssh -L 5000:localhost:5000 <ssh-user>@<CLOUD_INSTANCE_IP_ADDRESS>
-```
+## SSH tunneling (local port forwarding)
 This command is used to create a local port forwarding (also known as SSH tunneling) between your local machine and a remote server (cloud instance) using the SSH protocol.
+```bash
+ssh -L 5000:localhost:5000 <remote_user>@<remote_host>
+```
+
+or
+```bash
+ssh -L 5900:127.0.0.1:5900 -C -N -l remote_user remote_host
+```
+
+Here’s what this ssh command’s options mean:
+
+- The `-L` switch specifies the port bindings. In this case you’re binding port 5900 of the remote connection to port 5900 on your local machine.
+- The `-C` switch enables compression to help minimize resource consumption and speed things up.
+- The `-N` switch tells ssh that you don’t want to execute a remote command.
+- The `-l` switch specifies the remote login name.  

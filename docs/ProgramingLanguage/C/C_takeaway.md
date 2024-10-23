@@ -37,4 +37,20 @@ volatile int g;
 The volatile qualifier forces the compiler to read the value of g from memory each time it is referenced in the code. In general, as with any shared data structure, each access to a global variable should be protected by temporarily blocking signals.
 
 
+## array and struct
+
+```C
+typedef struct  {
+	char *name;
+	int age;
+	float weight;
+
+} Student;
+
+const Student students[100] = {
+	[10] = {.name = 'ni', .age=23, .weight = '100.0'},
+	[50] = {.name = 'wzq', .age=21, .weight = '120.0'}
+};
+```
+
 

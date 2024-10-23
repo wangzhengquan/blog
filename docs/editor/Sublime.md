@@ -1,5 +1,3 @@
-
-
 ## Multiple Selection with the Keyboard
 
 
@@ -129,8 +127,10 @@ Examples:
 All of the Goto commands can also be invoked via the "Goto menu".
  
 
-### Jump to line `Ctrl-g`
+## Jump to line `Ctrl-g`
 
-
+## Goto Last Edit Location
+- Windows/Linux: Ctrl+U
+- Mac: Command+U
 
 > https://www.sublimetext.com/docs/

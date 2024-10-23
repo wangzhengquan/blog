@@ -23,6 +23,9 @@ ES Modules and Import / Export Syntax:https://developer.mozilla.org/en-US/docs/W
 
 Javascript.info: https://javascript.info/import-export
 
+## Web components
+https://developer.mozilla.org/en-US/docs/Web/API/Web_components
+
 ## DOM
 
 Introduction to the DOM: https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction

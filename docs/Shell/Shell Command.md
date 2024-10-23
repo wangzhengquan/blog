@@ -194,12 +194,48 @@ nslookup -type=NS yahoo.com
 nslookup yahoo.com  ns2.yahoo.com
 ```
 
+### 查看端口占用
+ 
+Check if the UDP port 53 (commonly used for DNS services) is occupied 
+
+#### Method 1: Using ss Command
+The ss command is a utility to investigate sockets. It's a more modern replacement for the netstat command.
+```bash
+sudo ss -u -lpn | grep :53
+```
+* -u specifies to show UDP sockets.
+* -l lists listening sockets.
+* -p shows the process using the socket.
+* -n shows numerical addresses instead of resolving hostnames.
+
+####  Method 2: Using netstat Command
+```bash
+sudo netstat -u -lpn | grep :53
+```
+* -u specifies to show UDP sockets.
+* -l lists listening sockets.
+* -p shows the process using the socket.
+* -n shows numerical addresses instead of resolving hostnames.
+
+
+####  Method 3: Using lsof Command
+```bash
+sudo lsof -i UDP:53
+```
+* -i UDP:53 specifies to list open files associated with UDP port 53.
+
 ### netstat
 
 ```bash
-netstat -a --inet
-netstat -tlunp # The -tlnp options specify that netstat should display TCP connections (-t), show the local address and port numbers in numeric form (-n), and display the PID and name of the process that is occupying each port (-p).
+netstat -tlunp 
+```
+* -t specifies to show TCP sockets.
+* -u specifies to show UDP sockets.
+* -n show the local address and port numbers in numeric form 
+* -p and display the PID and name of the process that is occupying each port.
 
+```bash
+netstat -a --inet
 
 # 查找并关闭指定端口的进程
 netstat -tulnp | grep :${PORT} | awk  '{print $7}' | awk -F/  '{print $1}' | xargs -i kill  {}
@@ -277,6 +313,10 @@ find /usr/{lib,libexec} -name \*.la -delete
 find /usr -depth -name $(uname -m)-lfs-linux-gnu\* | xargs rm -rf
 
 find $(1) -not -type d -and -not -type l -print0 | xargs -0r chmod $(FILE_MODE)
+
+# 删除当前目录和其子目录下的所有后缀为".o"的文件
+find ./ -type f -name '*.o' -exec rm {} +
+find ./ -type f -name '*.o' -print0 | xargs -0 rm
 ```
 
 ### diff
@@ -477,7 +517,21 @@ sudo -i
 ```bash
 # 將指令的資料全部寫入名為 list 的檔案中
 find /home -name .bashrc > list 2>&1 
+
+# Write error to stderr (note 1>&2 at the end of echo command)
+echo "Error: $1 file not found" 1>&2
 ```
+
+### cat
+```bash
+# You can type content directly into a file using the cat command by redirecting the output using the > operator.
+cat > example.txt
+# Then, type the content you want to save in the file.
+This is the first line.
+This is the second line.
+# Press Ctrl+D, and the content will be saved to example.txt.
+```
+
 
 ## Download
 ### wget
@@ -495,6 +549,9 @@ curl https://github.com/ginuerzh/gost/releases/download/v2.11.1/gost-linux-amd64
 curl -O https://github.com/ginuerzh/gost/releases/download/v2.11.1/gost-linux-amd64-2.11.1.gz
 ```
 `-O, --remote-name`: Write output to a local file named like the remote file we get.
+
+
+
 
 ## man -  Manual Pages
 If you want the man page for a single program/command, you can run:

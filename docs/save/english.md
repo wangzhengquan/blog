@@ -12,8 +12,13 @@ GitHub：github.com/andrewyng/translation-agent
 
 StreamSpeech： https://github.com/ictnlp/StreamSpeech
 
+## 英语电子书
+https://github.com/hehonghui/awesome-english-ebooks
+
 ##
 https://github.com/xiaolai/everyone-can-use-english
+
+
 
 
 ## transcript

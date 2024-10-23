@@ -1,3 +1,5 @@
+## code
+https://legacy.reactjs.org/docs/codebase-overview.html
 ## hook
 https://legacy.reactjs.org/docs/hooks-intro.html
 
@@ -34,6 +36,8 @@ fires before React makes changes to the DOM. Libraries can insert dynamic CSS he
 ## react-error-boundary
 https://github.com/bvaughn/react-error-boundary
 
+## hook
+https://www.netlify.com/blog/2019/03/11/deep-dive-how-do-react-hooks-really-work/
 
 ## animation
 https://legacy.reactjs.org/docs/animation.html
@@ -41,3 +45,9 @@ https://legacy.reactjs.org/docs/animation.html
 ## react router
 https://reactrouter.com/en/main
 https://v5.reactrouter.com/web/guides/server-rendering
+
+## create
+npx create-react-app project-name
+
+## 如何在 React 中渲染 Markdown 文档
+https://blog.terminals.run/blog/2024-10-18-%E5%A6%82%E4%BD%95%E5%9C%A8-react-%E4%B8%AD%E6%B8%B2%E6%9F%93-markdown-%E6%96%87%E6%A1%A3

@@ -35,3 +35,8 @@ echo hello | pbcopy
 ```
 cmd + shift + .
 ```
+
+## ldd
+```
+otool -L ./ffmpeg
+```

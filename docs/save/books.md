@@ -1,4 +1,6 @@
 读书
+z-lib： https://zh.z-lib.gd/?continueFlag=26d89e48a164c353790b520eacd34dcb
+
 可汗学院创始人 Salman Khan 的新书：《Brave New Words——How AI Will Revolutionize Education (and Why That’s a Good Thing)》
 After Ten Years: Dietrich Bonhoeffer and Our Times
 莎士比亚全集
@@ -17,6 +19,7 @@ David Eagleman的《大脑与行为》
 昭明文选
 晏阳初
 翦商
+利维坦
 《中国人史纲》、《全球通史》、《世界是平的》、《创业的国度》。
 沈栋写的《红色赌盘》
 江城 

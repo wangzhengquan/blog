@@ -60,12 +60,23 @@ https://github.com/IceWhaleTech/CasaOS
 Runtipi：
 昨天给家里的 homeserver 装了这个 Runtipi：
 https://github.com/runtipi/runtipi
-安装各种应用方便很多，基于Docker，有个 App Store 可以直接一键安装，很快速，常见应用都有，界面图标都很好看，技术栈也很新，用起来挺舒服的。
-如果大家家里有树莓派之类的可以安装下，体验很棒.
 
+### NAS
 https://www.openmediavault.org/
 
 https://www.appinn.com/ds-cloud/
+
+
+https://x.com/wsygc/status/1793092035760759271
+
+### 存储, 网盘挂载	
+alist： https://alist.nn.ci/zh/guide/drivers/local.html
+				
+				https://github.com/alist-org/alist
+
+## NeoServer：
+NeoServer manages your servers via SSH without additional software installation. It supports terminal remote connections, multi-server script execution, container management, SFTP file management, and common performance data display.
+ https://apps.apple.com/us/app/neoserver-docker-ssh-sftp/id6448362669?platform=mac
 
 ## cloudflare
 基于Cloudflare的开源工具: https://github.com/zhuima/awesome-cloudflare

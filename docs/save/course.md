@@ -1,6 +1,7 @@
 # CS  Curriculum
  
-
+## 所有计算机方面的视频课程
+https://github.com/Developer-Y/cs-video-courses
 ## 自学指南
 https://csdiy.wiki/
 https://github.com/Developer-Y/cs-video-courses

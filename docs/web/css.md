@@ -117,6 +117,11 @@ border-spacing
 }
 ```
 
+## justify  align
+
+justify 是在横轴方向调整， align是在纵轴方向调整
+content 是对整个空间的分配，items是单元格内的对齐
+
 ## animation
 offset: https://developer.mozilla.org/en-US/docs/Web/CSS/offset
 

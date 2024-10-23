@@ -69,6 +69,8 @@ done
 ```
 
 
+
+
 ## If Statement
 
 ```bash
@@ -150,6 +152,18 @@ fi
 
 # wait for remaining workers and coordinator to exit.
 wait
+```
+
+
+## read
+
+```bash
+input="core core.* *.o temp.* *.out *.a *.so *.sym"
+
+# Iterate over each token
+while IFS= read -r token; do
+    echo "$token"
+done < <(echo "$input" | xargs -n1 echo)
 ```
 
 
