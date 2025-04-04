@@ -135,7 +135,7 @@ Where
 
 - linenum
 - function
-- filename:linenum/function
+- filename:LineNum/function
 - `*instruction_addr`
 
 For this demo, let's set a breakpoint at main(), and start the program:

@@ -31,11 +31,6 @@ button {
 box-sizing: border-box | content-box;
 ```
 
-## gap
-```css
-display: flex;
-gap: 1rem;
-```
 
 ## margin-block
 ```css

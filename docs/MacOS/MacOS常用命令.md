@@ -1,4 +1,9 @@
 
+## 快捷键
+静音: `Fn + F10`
+窗口最大化: `Ctr + Command + F`
+显示隐藏文件: `Command + shift + .`
+
 ## 网络
 
  ```
@@ -28,13 +33,7 @@ echo hello | pbcopy
 ⌘ + K 
 ```
 
-## 静音
-"Fn + F10"
-
-## 显示隐藏文件
-```
-cmd + shift + .
-```
+ 
 
 ## ldd
 ```

@@ -64,17 +64,24 @@ On Mac: Command + x  or  Cmd+Shift+k
 - On Mac: Shift + Option + Up/Down
 - On Ubuntu: Ctrl + Shift + Alt + Up/Down
 
-## Select in Words
-- On Windows/Ubuntu: Ctrl + Shift + Right arrow / Left arrow
-- On Mac: Command + Shift + Right arrow / Left arrow
 
-This is very useful to select words faster and edit as required.
+
+## Column / Box / Block Selection
+- On Windows / Ubuntu: `Shift + Alt + Selection`
+- On Mac: `Shift + Option + Selection`
+
 
 ## Add Cursor Above/Below
 - On Windows / Ubuntu: Ctrl + Alt + Up arrow / Down arrow
 - On Mac: Command + Alt + Up arrow / Down arrow
 
 You can select blocks of text by using the above command while you drag your mouse. A separate cursor will be added to the end of each selected line.
+
+## Select in Words
+- On Windows/Ubuntu: `Ctrl + Shift + Right arrow / Left arrow`
+- On Mac: `Command + Shift + Right arrow / Left arrow`
+
+This is very useful to select words faster and edit as required.
 
 ## Select Word
 - On Windows: Ctrl+ d
@@ -83,9 +90,6 @@ You can select blocks of text by using the above command while you drag your mou
 
 If you hit command + d more than once, you’ll add another occurrence of the same keyword to your selection.
 
-## Column (Box) Selection
-- On Windows / Ubuntu: Shift + Alt
-- On Mac: Shift + Option
 
 You can select blocks of text by using the above command while you drag your mouse. A separate cursor will be added to the end of each selected line.
 
@@ -104,9 +108,13 @@ This shortcut helps to indent the code as already set up in the editor settings.
 - On Mac: Command + b
 Sometimes when the file has a long width or in case of the split editor closing, sidebar helps a lot.
 
+## Navigate between files and edit locations
+`⌃-` and `⌃⇧-` : navigate between files and edit locations.
 
 >https://code.visualstudio.com/docs/introvideos/basics
 
 >https://code.visualstudio.com/docs/editor/editingevolved
+
+> https://code.visualstudio.com/docs/getstarted/tips-and-tricks
 
 >https://betterprogramming.pub/20-vs-code-shortcuts-for-fast-coding-cheatsheet-10b0e72fd5d

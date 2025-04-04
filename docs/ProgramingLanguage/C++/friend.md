@@ -6,7 +6,7 @@ class Z
 {
     int data; // private member
  
- 		friend class Y; // friend class forward declaration (elaborated class specifier)
+ 	friend class Y; // friend class forward declaration (elaborated class specifier)
     // the non-member function operator<< will have access to Z's private members
     friend std::ostream& operator<<(std::ostream& out, const Z& o);
     friend void X::set_chan(Z & t, int c); // members of other classes can be friends too

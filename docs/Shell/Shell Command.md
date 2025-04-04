@@ -182,7 +182,7 @@ ps -ef | grep "kucker" | awk  '{print $2}' | xargs -i sudo kill -9 {}
 
 ```
 
-## 网络
+## 网络(network)
 ### 查询域名IP
 ```bash
 dig +norecurse @a.root-servers.net any yahoo.com
@@ -192,6 +192,17 @@ dig +norecurse @ns1.yahoo.com any yahoo.com
 nslookup yahoo.com
 nslookup -type=NS yahoo.com
 nslookup yahoo.com  ns2.yahoo.com
+# 通过DNS server“114.114.114.114” 查询google.com的ip地址
+nslookup google.com 114.114.114.114
+```
+### 路由表(router table)
+查看路由表
+```bash
+netstat -rn
+```
+路由路径
+```bash
+traceroute 114.114.114.114
 ```
 
 ### 查看端口占用

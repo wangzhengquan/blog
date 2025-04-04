@@ -1,4 +1,8 @@
-Sure, here's the list of the most common React event types along with their related arguments and their types in TypeScript:
+## https://developer.mozilla.org/en-US/docs/Web/API/UI_Events
+
+
+## react events
+here's the list of the most common React event types along with their related arguments and their types in TypeScript:
 
 Clipboard Events:
 ```javascript
@@ -116,3 +120,6 @@ onVolumeChange: (event: React.SyntheticEvent<HTMLMediaElement>) => void
 onWaiting: (event: React.SyntheticEvent<HTMLMediaElement>) => void
 ```
 Please note that the type of the event argument in each event handler function may vary depending on the specific event type and the HTML element it's associated with. In the examples above, we've used the most common types provided by the React TypeScript definitions.
+
+
+

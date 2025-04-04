@@ -2,6 +2,9 @@
 https://en.cppreference.com
 https://cplusplus.com/reference
 
+## learncpp
+https://www.learncpp.com/
+
 
 ## C++ 编程指南
 - [C++ Super-FAQ](https://isocpp.org/faq) ：the [C++ Super-FAQ](https://isocpp.org/faq) is a great resource that explains things in a way that's detailed yet easy to understand (unlike a lot of C++ resources), and was co-written by Bjarne Stroustrup, the creator of C++!
@@ -12,3 +15,6 @@ https://cplusplus.com/reference
 
 ## modern c++ bootcamp that helps students understand modern c++
 https://github.com/cmu-db/15445-bootcamp
+
+## libquic
+https://github.com/devsisters/libquic

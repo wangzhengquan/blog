@@ -47,7 +47,11 @@ https://reactrouter.com/en/main
 https://v5.reactrouter.com/web/guides/server-rendering
 
 ## create
+
 npx create-react-app project-name
+npm create vite@latest
+npm create vite@latest my-react-app -- --template react
+
 
 ## 如何在 React 中渲染 Markdown 文档
 https://blog.terminals.run/blog/2024-10-18-%E5%A6%82%E4%BD%95%E5%9C%A8-react-%E4%B8%AD%E6%B8%B2%E6%9F%93-markdown-%E6%96%87%E6%A1%A3

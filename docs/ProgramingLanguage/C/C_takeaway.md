@@ -12,16 +12,16 @@
 只需要记住， 只有`* const` 才表示constant pointer  
 
 ```C++
-// constant pointer to a non-constant int
-int * const p;
+// constant pointer to a non-constant char
+char * const p;
 
-// non-constant pointer to a constant int
-const int * p;
-int const * p;
+// non-constant pointer to a constant char
+const char * p;
+char const * p;
 
-// constant pointer to a constant int
-const int * const p;
-int const * const p;
+// constant pointer to a constant char
+const char * const p;
+char const * const p;
 ```
 
 [The Clockwise/Spiral Rule](https://c-faq.com/decl/spiral.anderson.html)

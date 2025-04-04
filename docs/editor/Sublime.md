@@ -129,6 +129,9 @@ All of the Goto commands can also be invoked via the "Goto menu".
 
 ## Jump to line `Ctrl-g`
 
+## Joint multiple lines to one line
+`Cmd-Shift-J`
+
 ## Goto Last Edit Location
 - Windows/Linux: Ctrl+U
 - Mac: Command+U
