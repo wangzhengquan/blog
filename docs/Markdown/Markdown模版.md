@@ -25,6 +25,12 @@ $$
 $$
 
  
+$$\int_0^h \int_0^w p(x,y) \,dx\,dy = 1$$
+ 
+$$\text{Color} \approx \frac{1}{N} \sum_{i=1}^N \frac{f(\text{ray}_i)}{p(\text{ray}_i)}$$
+ 
+
+ 
 [1]: https://katex.org/
 [2]: http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference
 [3]: https://katex.org/docs/browser.html

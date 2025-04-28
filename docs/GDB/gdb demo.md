@@ -656,7 +656,7 @@ help breakpoint
 Just place ".gdbinit" in your home directory or project directory, for example with:
 
 ```
-wget -P ~ https://git.io/.gdbinit
+wget -P ./ https://git.io/.gdbinit
 ```
 
 Then debug as usual, the dashboard will appear automatically every time the inferior program stops.

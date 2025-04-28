@@ -2,8 +2,7 @@
 ```bash
 ssh  wzq@192.168.1.5
 ```
-
-## scp - “Secure Copy”
+## scp (Secure Copy)
 Sometimes, you may want to get individual files or entire folders from the Hive machines onto your local system, or vice versa. You can do this by using scp:
 ```bash
 scp <source> <destination>

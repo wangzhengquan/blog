@@ -101,7 +101,7 @@ sudo smartctl -a /dev/sda
 
 ### 制作启动硬盘
 
-如果在linux上用 `lsblk -p` 查看USB设备，如果是macos要用`diskutil list`查看, 查找到我的USB设备是/dev/disk3， 然后用dd命令把系统安装镜像烧录到USB上
+如果在linux上用 `lsblk -p` 查看USB设备，如果是macos要用`diskutil list`查看, 查找到我的USB设备是"/dev/disk3"， 然后用dd命令把系统安装镜像烧录到USB上
 
 ```bash
 dd if=ubuntu-16.04.5-desktop-amd64.iso of=/dev/disk3
@@ -258,6 +258,7 @@ netstat -tlnp | grep :${PORT} | awk '{print $7}' | cut -d'/' -f1 | xargs -i kill
 tcpdump -t -N 'port 80'
 ```
 
+ 
 
 ## 文件
 
@@ -604,7 +605,7 @@ shutdown -k now 'This system will reboot'
 reboot, halt, poweroff
 ```
 
-Reference:
+## Reference:
 >[ Linux system administration](https://developer.ibm.com/tutorials/l-lpic1-map/)
 
 

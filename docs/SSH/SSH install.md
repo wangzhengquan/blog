@@ -1,21 +1,21 @@
-## Intall in ubuntu
+# Intall in ubuntu
 
-install opensshservice
+## install opensshservice
 ```
 sudo apt install -y openssh-server
 ```
 
-install openssh-client
+## install openssh-client
 ```
 sudo apt install -y openssh-client
 ```
 
-check 
+## check 
 ```
 ps -aux | grep ssh
 ```
 
-startup
+## startup
 ```
 sudo service ssh start
 ```

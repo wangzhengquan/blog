@@ -5,7 +5,7 @@ function start() {
 	echo ${PATH}
 	echo "start mkdocs"
 	# /Library/Frameworks/Python.framework/Versions/3.10/bin/mkdocs serve &
-  mkdocs serve --dev-addr 127.0.0.1:${PORT} 
+ /Library/Frameworks/Python.framework/Versions/3.10/bin/mkdocs serve --dev-addr 127.0.0.1:${PORT} 
 	 
 }
 

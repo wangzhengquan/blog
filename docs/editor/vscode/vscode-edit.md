@@ -1,24 +1,17 @@
-## find file
+## Go to file
 Ctrl+P (Cmd+P on Mac) 
 
-Ctrl + Tab : switch between opened files
-
-`⌃-` and `⌃⇧-` : navigate between files and edit locations.
-
+## switch
+- Ctrl + Tab : switch between opened files.
+- ⌃- and ⌃⇧- : navigate between files and edit locations.
 
 ## Go to Definition
-
 If a language supports it, you can go to the definition of a symbol by pressing `F12`.
-
 If you press `Ctrl` and hover over a symbol, a preview of the declaration will appear.
 
-
 You can jump to the definition with `Ctrl+Click` or open the definition to the side with `Ctrl+Alt+Click`.
-
-
 ## Go to References
 `Shift + F12`
-
 ## Peek Definition 
 `Alt+F12`
 
@@ -26,15 +19,13 @@ You can navigate between different references in the peeked editor and make quic
 
 Additionally, the peek window is closed if you press Escape or double-click in the peek editor region.
 
-
-
-## Go to Symbol in File  
+## Find Symbol in File  
 - On Windows/Ubuntu: Ctrl + Shift + o
 - On Mac: Command + Shift+ o  
 
 You can group the symbols by kind by adding a colon, `@:`. 
 
-## Go to Symbol in Workspace   
+## Find Symbol in Workspace   
 - On Windows/Ubuntu: Ctrl + t
 - On Mac: Command + t
 
@@ -110,6 +101,10 @@ Sometimes when the file has a long width or in case of the split editor closing,
 
 ## Navigate between files and edit locations
 `⌃-` and `⌃⇧-` : navigate between files and edit locations.
+
+## Convert Tab（\t）to space
+
+按 `Ctrl/Cmd + Shift + P` → 输入 `Convert Indentation to Spaces`
 
 >https://code.visualstudio.com/docs/introvideos/basics
 

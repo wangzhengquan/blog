@@ -99,6 +99,37 @@ apt-get upgrade
 ```
 
 
+## 热点 (Hotspot)
+
+## 设置热点为永久激活
+修改热点配置以防止超时关闭
+```bash
+sudo nmcli connection modify Hotspot connection.autoconnect yes
+```
+## 禁用自动超时
+检查是否有 connection.auth-retries 或类似超时参数，并将其设置为较大值
+```sh
+sudo nmcli connection modify Hotspot-1 connection.auth-retries 999
+```
+
+### 删除热点
+#### 方法 1：通过命令行删除热点
+1. 查看已存在的热点
+```bash
+nmcli connection show
+```
+2. 删除热点(替换 Hotspot 为你的热点名称或UUID)
+```sh
+sudo nmcli connection delete Hotspot
+```
+3. 重启 NetworkManager
+```sh
+sudo systemctl restart NetworkManager
+```
+#### 方法 2：手动删除配置文件
+进入 NetworkManager 配置目录 `/etc/NetworkManager/system-connections/`, `ls`找到热点文件并删除，重启 NetworkManager。
+
+
 
 
 

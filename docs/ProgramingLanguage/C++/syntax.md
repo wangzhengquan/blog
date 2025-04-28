@@ -5,8 +5,12 @@
 ## std::optional
 The class template std::optional manages an optional contained value, i.e. a value that may or may not be present.
 
+## limit
+`std::numeric_limits<float>::max()`
+`FLT_MAX`
 ## deduce type
-```C++
+
+```c++
 std::visit([](auto&& arg)
 {
     using T = std::decay_t<decltype(arg)>;
