@@ -605,6 +605,23 @@ shutdown -k now 'This system will reboot'
 reboot, halt, poweroff
 ```
 
+## 校验码(checksums)
+### 生成校验码
+```bash
+shasum -a 256 docker.dmg
+```
+### 校验
+1. 创建 docker.sha256 文件
+校验码与文件名必须间隔两个空格，被校验的文件必须与.sha256文件在同一目录下。
+```docker.sha256
+409ca31a47ba1d1620825f09e02f6d5ce203b2907ab91047041a0e9b4b719593  Docker.dmg
+```
+2. 运行校验命令
+```bash
+shasum -a 256 -c docker.sha256
+```
+docker.sha256 文件的内容本身包含了目标文件名，而 `-c（check）`参数会让 shasum 根据该文件中的信息自动查找并校验对应的文件。
+
 ## Reference:
 >[ Linux system administration](https://developer.ibm.com/tutorials/l-lpic1-map/)
 

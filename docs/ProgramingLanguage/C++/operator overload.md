@@ -104,9 +104,9 @@ Overloading unary minus and plus is not very common and probably best avoided. I
 Also note that the postfix variant does more work and is therefore less efficient to use than the prefix variant. This is a good reason to generally prefer prefix increment over postfix increment. While compilers can usually optimize away the additional work of postfix increment for built-in types, they might not be able to do the same for user-defined types (which could be something as innocently looking as a list iterator). Once you got used to do i++, it becomes very hard to remember to do ++i instead when i is not of a built-in type (plus you'd have to change code when changing a type), so it is better to make a habit of always using prefix increment, unless postfix is explicitly needed.
 
 ### Binary arithmetic operators
-For the binary arithmetic operators, do not forget to obey the third basic rule operator overloading: If you provide +, also provide +=, if you provide -, do not omit -=, etc. Andrew Koenig is said to have been the first to observe that the compound assignment operators can be used as a base for their non-compound counterparts. That is, operator + is implemented in terms of +=, - is implemented in terms of -= etc.
+For the binary arithmetic operators, do not forget to obey the third basic rule operator overloading: If you provide `+`, also provide `+=`, if you provide `-`, do not omit `-=`, etc. Andrew Koenig is said to have been the first to observe that the compound assignment operators can be used as a base for their non-compound counterparts. That is, operator `+` is implemented in terms of `+=`, `-` is implemented in terms of `-=` etc.
 
-According to our rules of thumb, + and its companions should be non-members, while their compound assignment counterparts (+= etc.), changing their left argument, should be a member. Here is the exemplary code for += and +; the other binary arithmetic operators should be implemented in the same way:
+According to our rules of thumb, `+` and its companions should be non-members, while their compound assignment counterparts (`+=` etc.), changing their left argument, should be a member. Here is the exemplary code for `+=` and `+`; the other binary arithmetic operators should be implemented in the same way:
 ```C++
 class X {
   X& operator+=(const X& rhs)
@@ -122,7 +122,7 @@ inline X operator+(X lhs, const X& rhs)
 }
 ```
 
-`operator+=` returns its result per reference, while `operator+` returns a copy of its result. Of course, returning a reference is usually more efficient than returning a copy, but in the case of `operator+`, there is no way around the copying. When you write `a + b`, you expect the result to be a new value, which is why `operator+` has to return a new value.3 Also note that `operator+` takes its left operand by copy rather than by const reference. The reason for this is the same as the reason giving for `operator=` taking its argument per copy.
+operator`+=` returns its result per reference, while `operator+` returns a copy of its result. Of course, returning a reference is usually more efficient than returning a copy, but in the case of `operator+`, there is no way around the copying. When you write `a + b`, you expect the result to be a new value, which is why `operator+` has to return a new value. Also note that `operator+` takes its left operand by copy rather than by const reference. The reason for this is the same as the reason giving for `operator=` taking its argument per copy.
 
 The bit manipulation operators `~` `&` `|` `^` `<<` `>>` should be implemented in the same way as the arithmetic operators. However, (except for overloading << and `>>` for output and input) there are very few reasonable use cases for overloading these.
 
@@ -247,7 +247,7 @@ Overloaded thus, new and delete behave like static member functions. For objects
 ### Placement new
 C++ allows new and delete operators to take additional arguments.
 So-called placement new allows you to create an object at a certain address which is passed to:
-```
+```c++
 class X { /* ... */ };
 char buffer[ sizeof(X) ];
 void f()

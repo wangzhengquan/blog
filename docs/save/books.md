@@ -1,5 +1,6 @@
 读书
-z-lib： https://zh.z-lib.gd/?continueFlag=26d89e48a164c353790b520eacd34dcb
+z-lib： https://zh.z-lib.gd/
+https://101ml.fi/
 
 https://github.com/0voice/expert_readed_books
 
