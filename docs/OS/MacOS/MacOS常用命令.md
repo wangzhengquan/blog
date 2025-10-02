@@ -33,9 +33,13 @@ echo hello | pbcopy
 ⌘ + K 
 ```
 
- 
 
 ## ldd
 ```
 otool -L ./ffmpeg
+```
+
+## brew
+```
+brew --prefix assimp
 ```

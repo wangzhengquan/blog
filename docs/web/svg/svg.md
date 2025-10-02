@@ -70,25 +70,6 @@ At its start, the arc element takes in two parameters for the x-radius and y-rad
 A rx ry x-axis-rotation large-arc-flag sweep-flag x y
 a rx ry x-axis-rotation large-arc-flag sweep-flag dx dy
 ```
-
-
-
-## tutorial
-mdn: https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Basic_Shapes
-w3c: https://www.w3.org/TR/SVG/Overview.html
-advent calendar-themed SVG Tutorial: 	https://svg-tutorial.com/
-
-https://www.w3.org/TR/SVG/coords.html#TransformMatrixDefined
-
-
-## introduction to SVG
-
-
-svgprimer:	https://www.w3.org/Graphics/SVG/IG/resources/svgprimer.html
-
-##  useful resources
-Inkscape's documentation:	https://inkscape.org/learn/
-
 ## drawing applications
 
 Inkscape: https://inkscape.org
@@ -97,3 +78,13 @@ Inkscape: https://inkscape.org
 
 ## reference
 svgrepo: https://www.svgrepo.com/vectors
+https://www.w3.org/TR/SVG/paths.html#PathData
+
+mdn: https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Basic_Shapes
+w3c: https://www.w3.org/TR/SVG/Overview.html
+advent calendar-themed SVG Tutorial: 	https://svg-tutorial.com/
+
+https://www.w3.org/TR/SVG/coords.html#TransformMatrixDefined
+
+svgprimer:	https://www.w3.org/Graphics/SVG/IG/resources/svgprimer.html
+

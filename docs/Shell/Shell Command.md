@@ -214,10 +214,10 @@ The ss command is a utility to investigate sockets. It's a more modern replaceme
 ```bash
 sudo ss -u -lpn | grep :53
 ```
-* -u specifies to show UDP sockets.
-* -l lists listening sockets.
-* -p shows the process using the socket.
-* -n shows numerical addresses instead of resolving hostnames.
+* `-u` specifies to show UDP sockets.
+* `-l` lists listening sockets.
+* `-p` shows the process using the socket.
+* `-n` shows numerical addresses instead of resolving hostnames.
 
 ####  Method 2: Using netstat Command
 ```bash
@@ -254,7 +254,7 @@ netstat -tlnp | grep :${PORT} | awk '{print $7}' | cut -d'/' -f1 | xargs -i kill
 ```
 
 ### tcpdump
-```
+```bash
 tcpdump -t -N 'port 80'
 ```
 
@@ -299,17 +299,32 @@ cd wzq~
 
 ### grep
 
-替换或删除跨越多个目录的多个文件里的指定文本
+**替换或删除跨越多个目录的多个文件里的指定文本**
+
+linux
 ```bash
 # 替换当前目录下除.git和build目录外的所有文件里的‘window’为‘linux’
 grep -rl 'windows' ./ --exclude-dir=".git"  --exclude-dir="node_modules"| xargs sed -i 's/windows/linux/g'
+```
+
+Mac
+```bash
+
 # Mac下sed命令的"-i"选项后面需要加字符串表示备份文件的后缀
 grep -rl 'windows' ./ --exclude-dir=".git"  --exclude-dir="node_modules" | xargs sed -i ''  's/windows/linux/g'
 
-#删除出现‘windows’的行
-grep -rl 'windows' ./ | xargs sed -i ''   '/windows/d'
+# or 把 @/app/dashboard/ 替换为 @/app/admin/
+find . -type f -not -path '*/.git/*' -not -path '*/node_modules/*' -exec grep -Il '.' {} + | xargs sed -i '' 's|@/app/dashboard/|\@/app/admin/|g'
+# or
+find . -type f -not -path '*/.git/*' -not -path '*/node_modules/*' -exec perl -pi -e 's|\@/app/dashboard/|\@/app/admin/|g' {} +
 
 ```
+
+**删除出现‘windows’的行**
+```
+grep -rl 'windows' ./ | xargs sed -i ''   '/windows/d'
+```
+
 统计某个词语在文件中出现的次数
 ```bash
 # count the number of occurrence of a word in a text file
@@ -347,7 +362,7 @@ diff -y [oldDir] [newDir]
 ## sed
  [https://www.grymoire.com/Unix/Sed.html](https://www.grymoire.com/Unix/Sed.html)
 
-## 压缩与打包
+## 压缩
 ### tar
 ```bash
 $ tar [-z|-j|-J] [cv] [-f tarfile] <files or directory to be compressed>   # 打包與壓縮
@@ -433,6 +448,12 @@ You can verify the contents of your file using the unzip command.
 $ unzip -l project0-submission.zip
 ```
 
+### gzip 
+
+解压缩gz文件
+```bash
+gzip -d initramfs.gz
+```
 ## User
 
 ### add user 
@@ -538,10 +559,10 @@ echo "Error: $1 file not found" 1>&2
 ```bash
 # You can type content directly into a file using the cat command by redirecting the output using the > operator.
 cat > example.txt
-# Then, type the content you want to save in the file.
+# Press Enter Then, type the content you want to save in the file.
 This is the first line.
 This is the second line.
-# Press Ctrl+D, and the content will be saved to example.txt.
+# Press Enter then Ctrl+D, and the content will be saved to example.txt.
 ```
 
 

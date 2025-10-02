@@ -1,5 +1,4 @@
-## Go to file
-Ctrl+P (Cmd+P on Mac) 
+
 
 ## switch
 - Ctrl + Tab : switch between opened files.
@@ -26,13 +25,17 @@ Additionally, the peek window is closed if you press Escape or double-click in t
 You can group the symbols by kind by adding a colon, `@:`. 
 
 ## Find Symbol in Workspace   
-- On Windows/Ubuntu: Ctrl + t
-- On Mac: Command + t
+- Windows/Ubuntu: Ctrl + t
+- Mac: Command + t
 
+## Find File in Workspace 
+- Mac:  `Cmd+P`
+- Windows:  `Ctrl+P`
+ 
 ## Navigate to a Specific Line
 
 - On Windows/Ubuntu: Ctrl + g
-- On Mac: Ctrl + g or Ctrl + p
+- On Mac: Ctrl + g 
 
 
 

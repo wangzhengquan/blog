@@ -17,6 +17,19 @@ div {
   clip-path: circle(closest-side);
 }
 ```
+
+##
+```css
+.space-y-4 > :not([hidden]) ~ :not([hidden]) {
+   --tw-space-y-reverse: 0;
+   margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+   margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+} 
+```
+
+- `>`: 这是直接子代选择器。它意味着我们只选择 .space-y-4 元素的直接子元素。
+- `~`: 这是 后续兄弟组合器 (General Sibling Combinator)。A ~ B 会选择所有在元素 A 之后，并且与 A 拥有相同父元素的 B 元素。
+
 ## center
 ```css
 
@@ -39,18 +52,20 @@ margin-block-end: 20px;
 ```
 
 ## aspect-ratio
+
 ```css
 aspect-ratio: 1 / 1;
 ```
 
 ## object-fit
-The `object-fit` CSS property sets how the content of a replaced element, such as an <img> or <video>, should be resized to fit its container.
+The `object-fit` CSS property sets how the content of a replaced element, such as an `<img>` or `<video>`, should be resized to fit its container.
 
 ## object-position
 The object-position CSS property specifies the alignment of the selected replaced element's contents within the element's box. Areas of the box which aren't covered by the replaced element's object will show the element's background.
 
 
 ## CSS box model
+
 https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model
 
 ### shape-outside
@@ -82,6 +97,7 @@ text-transform: uppercase;
 white-space: nowrap;
 overflow: hidden;
 text-overflow: ellipsis;
+```
 
 ## line-height
 ```css

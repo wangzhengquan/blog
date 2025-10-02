@@ -1,6 +1,6 @@
 
 ###  开发必备编译环境
-```bash
+```sh
 # 编译环境
 apt-get install build-essential make automake autoconf libtool-bin
 
@@ -15,6 +15,10 @@ apt-get install gcc-multilib
 apt-get install openssl libssl-dev
 
 apt-get install zlib1g-dev libsdl1.2-dev libesd0-dev 
+
+sudo apt-get install libgtk-3-dev libx11-dev
+
+apt install -y libxcb-cursor0 libxcb-cursor-dev
  
 ```
 
@@ -100,13 +104,18 @@ apt-get upgrade
 
 
 ## 热点 (Hotspot)
+### 启动热点
+```bash
+nmcli connection show 
+nmcli connection up HostspotId
+```
 
-## 设置热点为永久激活
+### 设置热点为永久激活
 修改热点配置以防止超时关闭
 ```bash
 sudo nmcli connection modify Hotspot connection.autoconnect yes
 ```
-## 禁用自动超时
+### 禁用自动超时
 检查是否有 connection.auth-retries 或类似超时参数，并将其设置为较大值
 ```sh
 sudo nmcli connection modify Hotspot-1 connection.auth-retries 999

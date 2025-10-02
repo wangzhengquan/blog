@@ -11,6 +11,8 @@ https://github.com/openai/openai-assistants-quickstart
 字幕
 https://x.com/jesselaunz/status/1771729386653278528
 
+## html 元素类型
+https://html.spec.whatwg.org/multipage/dom.html
 
 ## javascript
 
@@ -102,17 +104,17 @@ doc: https://nextjs.org/docs
 		https://nextjs.org/docs/app/building-your-application/rendering
 
 auth:
+		https://authjs.dev/getting-started
 		https://authjs.dev/getting-started/providers/credentials-tutorial
 		https://nextjs.org/docs/app/building-your-application/routing/middleware
 react-foundations: https://nextjs.org/learn/react-foundations
 
+## NextAuth.js
+https://next-auth.js.org/
+
 ## vercel
 https://vercel.com/docs/projects/environment-variables
 https://vercel.com/docs/projects/domains/add-a-domain
-
-
-## NextAuth.js
-https://next-auth.js.org/
 
 
 ##  Vercel Postgres SDK 
@@ -152,11 +154,15 @@ https://legacy.reactjs.org/blog/2018/09/10/introducing-the-react-profiler.html
 color transform: https://www.rapidtables.com/convert/color/rgb-to-hsl.html
 
 ## fonts
+https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Text_styling/Web_fonts
 https://fonts.google.com/
 https://www.fontsquirrel.com/
 converting from ttf to woff2: https://github.com/google/woff2
 
 Introduction to variable fonts: https://web.dev/articles/variable-fonts
+
+## image
+https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Performance/Multimedia
 
 ## colors
 https://uicolors.app/create
@@ -235,7 +241,9 @@ https://github.com/xy-sea/blog/blob/main/markdown/%E4%BB%8E0%E5%88%B01%E6%90%AD%
 WebPageTest: https://github.com/catchpoint/WebPageTest
 性能优化：https://moz.com/blog/the-seo-professional-s-guide-to-waterfall-diagrams
 
-
+## 数据可视化
+Goolge Looker Studio: https://lookerstudio.google.com/
+nodered： https://nodered.org/
 
 ## ======
 

@@ -10,8 +10,12 @@ https://ui.shadcn.com/
 https://www.tailwindawesome.com/
 
 ## floating-ui
+解决tooltip , dropdownmenu 对齐的问题
 https://floating-ui.com
 https://github.com/floating-ui/floating-ui
+
+## table
+https://www.ag-grid.com/react-data-grid/getting-started/
 
 ##  Animation
 react-spring: https://www.react-spring.dev/
@@ -23,6 +27,7 @@ https://www.framer.com/motion
 
 ## drag-drop
 drag-and-drop: https://github.com/atlassian/pragmatic-drag-and-drop
+			https://atlassian.design/components/pragmatic-drag-and-drop/examples/
 react-draggable: https://github.com/react-grid-layout/react-draggable
 use-gesture : https://github.com/pmndrs/use-gesture
 

@@ -3,12 +3,16 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_classes
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/new#description
+
 ## coordinate and size
 - getBoundingClientRect
 - offsetHeight: https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetHeight
 - clientHeight: https://developer.mozilla.org/en-US/docs/Web/API/Element/clientHeight
 - window.innerHeight and window.outerHeight
-- IntersectionObserver
+
+
+## IntersectionObserver
+
 ```javascript
 useEffect(() => {
     const div = ref.current;
@@ -29,8 +33,35 @@ useEffect(() => {
       observer.disconnect();
     }
   }, []);
+
 ```
 
+```javascript
+const observer = new IntersectionObserver(function(entries) {
+	entries.forEach(function(entry) {
+	if (entry.isIntersecting) {
+	entry.target.src = entry.target.getAttribute('data-lazyload'); // 开始加载图片,把data-origin的值放到src
+	observer.unobserve(entry.target); // 停止监听已开始加载的图片
+	entry.target.removeAttribute('data-lazyload');
+  }
+});
+
+   
+}, {
+  threshold: 0,
+  rootMargin: '200px'
+});
+	
+
+function loadImages(images) {
+	images.forEach(function(image){observer.observe(image)} );
+}
+       
+loadImages(document.querySelectorAll('.list-product .item-product img'));
+				s	
+
+
+```
 
 
 ## scroll

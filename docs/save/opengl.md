@@ -1,9 +1,9 @@
 https://learnopengl.com/Getting-started/OpenGL
 
 opengl-tutorial:
-https://www.opengl-tutorial.org/
+https://www.opengl-tutorial.org
 
-https://ogldev.org/index.html
+https://ogldev.org
 
 opengl wiki:
 https://www.khronos.org/opengl/wiki/
@@ -17,3 +17,6 @@ https://github.com/jayanam/jgl_demos
 
 imgui
 https://github.com/ocornut/imgui?tab=readme-ov-file
+
+## glm 
+api: https://glm.g-truc.net/0.9.2/api/a00245.html
