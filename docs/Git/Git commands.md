@@ -6,9 +6,14 @@ git checkout -b <new-branch> <start-point>
 git switch -c <new-branch> <start-point>
 
 ```
- 
 
-### 本地所有已追踪且已修改的但没有的提交的，都返回到原来的状态
+## 把某个文件恢复到某个提交点
+```bash
+git checkout <提交哈希值> -- <文件路径>
+```
+撤销恢复： 如果你不小心恢复了错误的文件或版本，并且还没有提交，你可以使用 `git restore <文件路径>` 来撤销工作目录的更改，或者使用 `git restore --staged <文件路径>` 来撤销暂存区的更改。
+
+## 本地所有已追踪且已修改的但没有的提交的，都返回到原来的状态
 ```bash
 # revert all local uncommitted changes (should be executed in repo root):
 git checkout .
@@ -60,11 +65,18 @@ git checkout --patch checkpoint file
 
 
 ## git log
+查看某个文件的提交历史
+```bash
+git log -- <文件路径>
+```
+
+beautfull log
 ```bash
 git log --graph --decorate --oneline --simplify-by-decoration --all
 
 git log --oneline --graph --decorate --all
 ```
+
 说明：  
 - `--decorate` 标记会让git log显示每个commit的引用(如:分支、tag等)
 - `--oneline` 一行显示

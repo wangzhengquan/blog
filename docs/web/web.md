@@ -3,6 +3,13 @@
 https://web.dev/learn/css
 https://web.dev/articles/cls
 
+##  project template
+npx create-vite@latest
+npm create vite@latest name-of-your-project -- --template react
+
+## code editor 
+monaco-editor  : https://github.com/suren-atoyan/monaco-react
+
 ## 英语学习
 DashPlayer 的目标就是方便你观看英文视频： 
 https://github.com/solidSpoon/DashPlayer
@@ -244,6 +251,11 @@ WebPageTest: https://github.com/catchpoint/WebPageTest
 ## 数据可视化
 Goolge Looker Studio: https://lookerstudio.google.com/
 nodered： https://nodered.org/
+
+## cross platform
+https://v2.tauri.app/
+
+
 
 ## ======
 

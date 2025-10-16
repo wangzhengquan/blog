@@ -64,6 +64,46 @@ loadImages(document.querySelectorAll('.list-product .item-product img'));
 ```
 
 
+```jsx
+import { Fragment, useRef, useLayoutEffect } from 'react';
+
+function VisibilityObserverFragment({ threshold = 0.5, onVisibilityChange, children }) {
+  const fragmentRef = useRef(null);
+
+  useLayoutEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        onVisibilityChange(entries.some(entry => entry.isIntersecting))
+      },
+      { threshold }
+    );
+    
+    fragmentRef.current.observeUsing(observer);
+    return () => fragmentRef.current.unobserveUsing(observer);
+  }, [threshold, onVisibilityChange]);
+
+  return (
+    <Fragment ref={fragmentRef}>
+      {children}
+    </Fragment>
+  );
+}
+
+function MyComponent() {
+  const handleVisibilityChange = (isVisible) => {
+    console.log('Component is', isVisible ? 'visible' : 'hidden');
+  };
+
+  return (
+    <VisibilityObserverFragment onVisibilityChange={handleVisibilityChange}>
+      <SomeThirdPartyComponent />
+      <AnotherComponent />
+    </VisibilityObserverFragment>
+  );
+}
+```
+
+
 ## scroll
 - scrollHeight:
 - element.scrollTop / window.scrollY: 

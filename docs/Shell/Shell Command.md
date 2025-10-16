@@ -345,6 +345,18 @@ find $(1) -not -type d -and -not -type l -print0 | xargs -0r chmod $(FILE_MODE)
 find ./ -type f -name '*.o' -exec rm {} +
 find ./ -type f -name '*.o' -print0 | xargs -0 rm
 ```
+# 要删除当前目录中所有不是文件目录的文件
+```bash
+find . -maxdepth 1 -type f -not -path './.git/*' -print0 | xargs -0 rm --
+```
+- find .: 从当前目录开始查找。
+- maxdepth 1: 只在当前目录中查找，不进入子目录。
+- type f: 只查找常规文件（file）。
+- not -path './.git/*': 这是一个可选的排除项，它会排除 .git 目录下的所有文件。如果你不想删除版本控制相关的文件，这是一个很好的做法。如果你想删除所有文件，包括 .git 目录下的文件，你可以移除这部分。
+- print0: 以空字符作为分隔符打印查找到的文件名。这对于处理文件名中包含空格或特殊字符的情况非常安全。
+- `xargs -0 rm --`: xargs 从 find 命令接收输出，并将其作为参数传递给 rm 命令。
+  - 0: 告诉 xargs 输入是用空字符分隔的。
+  - rm --: rm 是删除文件的命令。-- 告诉 rm 命令，后续的参数都是文件名，而不是选项，这可以防止文件名以 - 开头时被误认为是选项。
 
 ### diff
 ```bash

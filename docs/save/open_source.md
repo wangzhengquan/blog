@@ -5,3 +5,10 @@
 
 3. tiptap: https://tiptap.dev/
 
+
+## 绘图
+点线图： excalidraw
+
+## 数学图形
+https://github.com/ChristopherChudzicki/math3d-react
+

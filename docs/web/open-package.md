@@ -30,6 +30,14 @@ drag-and-drop: https://github.com/atlassian/pragmatic-drag-and-drop
 			https://atlassian.design/components/pragmatic-drag-and-drop/examples/
 react-draggable: https://github.com/react-grid-layout/react-draggable
 use-gesture : https://github.com/pmndrs/use-gesture
+react-beautiful-dnd: https://github.com/atlassian/react-beautiful-dnd
+
+## math
+mathbox
+https://mathbox.org/
+https://github.com/unconed/mathbox
+mathquill
+http://mathquill.com/
 
 
 ## Virtualization
